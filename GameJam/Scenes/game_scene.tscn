@@ -9,7 +9,7 @@ size = Vector2(130, 127)
 [node name="GameScene" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(960, 1062)
+position = Vector2(691, 675)
 scale = Vector2(17.76, 0.64)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
@@ -21,7 +21,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_6ly6o")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(1200, 908)
+position = Vector2(931, 521)
 scale = Vector2(2.17852, 0.245648)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
@@ -33,7 +33,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_6ly6o")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(599, 780)
+position = Vector2(330, 393)
 scale = Vector2(2.17852, 0.245648)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
@@ -47,5 +47,4 @@ shape = SubResource("RectangleShape2D_6ly6o")
 [node name="Player" parent="." instance=ExtResource("2_lgrao")]
 position = Vector2(611, 390)
 scale = Vector2(0.5, 0.5)
-jump_force = -500.0
-coyote_time = 0.05
+jump_force = -550.0

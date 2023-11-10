@@ -24,7 +24,7 @@ func _physics_process(delta):
 
 	movement()
 	move_and_slide()
-	print(coyote_timer)
+	
 
 func apply_gravity(delta : float)->void:
 	if not is_on_floor():
@@ -46,8 +46,7 @@ func manage_coyote_time()->void:
 func movement()->void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x += direction * accelaration
-	else:
 		velocity.x = move_toward(velocity.x, 0, deccelaration)
 
 	velocity.x = clampf(velocity.x,-MAX_MOVE_SPEED,MAX_MOVE_SPEED)
+	print(velocity.x)
