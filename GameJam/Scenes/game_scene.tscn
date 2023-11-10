@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://h3bltujuqw3d"]
+[gd_scene load_steps=15 format=3 uid="uid://h3bltujuqw3d"]
 
 [ext_resource type="Texture2D" uid="uid://c8pgdkpkyq20k" path="res://icon.svg" id="1_ab82f"]
 [ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_0vexw"]
@@ -173,7 +173,18 @@ texture = ExtResource("4_vwtdr")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fntw0")
 
+[sub_resource type="Environment" id="Environment_gg1mh"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 1.52
+glow_bloom = 0.06
+glow_blend_mode = 0
+glow_hdr_threshold = 0.15
+glow_hdr_scale = 1.35
+
 [node name="GameScene" type="Node2D"]
+scale = Vector2(1.00117, 1.00593)
 
 [node name="Player" parent="." instance=ExtResource("2_lgrao")]
 position = Vector2(591, 424)
@@ -196,13 +207,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-41.8389, -498.246)
+position = Vector2(-499.973, -5.23589)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(452.414, 212.89)
+position = Vector2(254.521, -430.371)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-410.575, 285.357)
+position = Vector2(245.452, 435.607)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
@@ -253,3 +264,6 @@ theme_override_fonts/font = ExtResource("6_6ka2g")
 theme_override_font_sizes/font_size = 40
 text = "00:00:00"
 metadata/_edit_use_anchors_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gg1mh")
