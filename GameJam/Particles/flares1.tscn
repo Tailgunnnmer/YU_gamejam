@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://11340dvsbs33"]
+
+[ext_resource type="Texture2D" uid="uid://c1omg78bkdxuy" path="res://Assets/Kenney Particles/PNG (Transparent)/star_04.png" id="1_s6473"]
+[ext_resource type="Texture2D" uid="uid://cxjmp1tc2x1bq" path="res://Assets/Kenney Particles/PNG (Transparent)/flare_01.png" id="2_pv40y"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ii8m5"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_mvy35"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.491641, 0.56155, 0.62538, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.977756, 0.977756, 0.977756, 1, 0.86, 1, 0.988333, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_16ig0"]
+gradient = SubResource("Gradient_mvy35")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tbpd0"]
+emission_shape = 1
+emission_sphere_radius = 300.0
+particle_flag_disable_z = true
+direction = Vector3(0, -50, 0)
+spread = 22.27
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 500.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color = Color(1, 1, 1, 0.8)
+color_ramp = SubResource("GradientTexture1D_16ig0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fbsrh"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+visible = false
+material = SubResource("CanvasItemMaterial_ii8m5")
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_tbpd0")
+texture = ExtResource("1_s6473")
+lifetime = 2.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+process_material = SubResource("ParticleProcessMaterial_fbsrh")
+texture = ExtResource("2_pv40y")
