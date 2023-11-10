@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://6578ddw8awnx"]
+
+[ext_resource type="Script" path="res://Scripts/platforms/VanishingPlatform.gd" id="1_ih652"]
+[ext_resource type="Texture2D" uid="uid://bfu1u61f3hrgg" path="res://Assets/Platform/Platform/Cloud.png" id="2_adpaf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhww2"]
+size = Vector2(297, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysiy7"]
+size = Vector2(297, 113)
+
+[node name="VanishingPlatform" type="CharacterBody2D" groups=["platform"]]
+script = ExtResource("1_ih652")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_adpaf")
+offset = Vector2(142.005, 111.985)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.5, -1.5)
+shape = SubResource("RectangleShape2D_xhww2")
+one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(18.5, -5.5)
+shape = SubResource("RectangleShape2D_ysiy7")
+debug_color = Color(0, 0.643137, 0.309804, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

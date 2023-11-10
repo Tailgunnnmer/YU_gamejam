@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bh3nym6euqvuw"]
+
+[ext_resource type="Script" path="res://Scripts/traps/Spike.gd" id="1_2uyy1"]
+[ext_resource type="Texture2D" uid="uid://t2f31kmvkxyu" path="res://Assets/Platform/Spikes/Spike_2.png" id="2_luyam"]
+[ext_resource type="Texture2D" uid="uid://oaneqhfdxqcr" path="res://Assets/Platform/Spikes/Spike_3.png" id="3_nrqvt"]
+[ext_resource type="Texture2D" uid="uid://bgdj2qrra44v5" path="res://Assets/Platform/Spikes/Spike_4.png" id="4_irpk0"]
+[ext_resource type="Texture2D" uid="uid://vnot0dqyaavg" path="res://Assets/Platform/Spikes/Spike_Stone_1.png" id="5_6lcdi"]
+[ext_resource type="Texture2D" uid="uid://cmhdx3qmu3ltg" path="res://Assets/Platform/Spikes/Spike_Stone_Mouth_Open.png" id="6_1l1j8"]
+[ext_resource type="Texture2D" uid="uid://cukrtsbvlhqpy" path="res://Assets/Platform/Spikes/Spike_Stone_Eyes.png" id="7_qglf7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wxir3"]
+radius = 152.21
+
+[node name="SpikeVar1" type="Area2D"]
+script = ExtResource("1_2uyy1")
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spike" type="Sprite2D" parent="Spikes"]
+position = Vector2(-70, -83)
+rotation = -0.340056
+texture = ExtResource("2_luyam")
+
+[node name="Spikes2" type="Sprite2D" parent="Spikes"]
+position = Vector2(-107, -49)
+rotation = -0.770434
+texture = ExtResource("2_luyam")
+
+[node name="Spike3" type="Sprite2D" parent="Spikes"]
+position = Vector2(16, -101)
+texture = ExtResource("3_nrqvt")
+
+[node name="Spike4" type="Sprite2D" parent="Spikes"]
+position = Vector2(121, -70)
+rotation = 0.626287
+scale = Vector2(1, 1)
+texture = ExtResource("4_irpk0")
+
+[node name="Rock" type="Sprite2D" parent="."]
+texture = ExtResource("5_6lcdi")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+position = Vector2(0, 32)
+texture = ExtResource("6_1l1j8")
+
+[node name="Eyes" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+texture = ExtResource("7_qglf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -37)
+shape = SubResource("CircleShape2D_wxir3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
