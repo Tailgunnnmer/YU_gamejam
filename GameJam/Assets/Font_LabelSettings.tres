@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ccy3f3l2q3df1"]
+
+[ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="1_hxqre"]
+
+[resource]
+font = ExtResource("1_hxqre")
+font_size = 100
