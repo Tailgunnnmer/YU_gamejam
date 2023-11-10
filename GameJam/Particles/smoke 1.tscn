@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ef1i745587g"]
+
+[ext_resource type="Texture2D" uid="uid://by0j7gkfpn5rl" path="res://Assets/Kenney Particles/PNG (Transparent)/smoke_04.png" id="1_gk58g"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_71ch6"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_dsk06"]
+offsets = PackedFloat32Array(0, 0.485562, 0.99924)
+colors = PackedColorArray(0.952941, 1, 1, 1, 0.668816, 1, 0.999812, 1, 0.741176, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6dh4d"]
+gradient = SubResource("Gradient_dsk06")
+
+[sub_resource type="Curve" id="Curve_g6ffg"]
+max_value = 2.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1.45303), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_iiof8"]
+curve = SubResource("Curve_g6ffg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wy3ma"]
+particle_flag_disable_z = true
+direction = Vector3(50, -50, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 30.0
+angular_velocity_min = -15.0
+angular_velocity_max = 15.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+radial_accel_max = 35.35
+scale_min = 0.1
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_iiof8")
+color = Color(1, 1, 1, 0.356863)
+color_ramp = SubResource("GradientTexture1D_6dh4d")
+hue_variation_min = -0.03
+hue_variation_max = 0.02
+turbulence_enabled = true
+turbulence_noise_strength = 1.51
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_71ch6")
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_wy3ma")
+texture = ExtResource("1_gk58g")
+lifetime = 50.0
+explosiveness = 0.32

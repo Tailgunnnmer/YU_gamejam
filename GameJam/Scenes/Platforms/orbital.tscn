@@ -26,6 +26,7 @@ script = ExtResource("1_o7i52")
 texture = ExtResource("2_if7eh")
 
 [node name="Blink" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 1, 39.91, 1)
 sprite_frames = SubResource("SpriteFrames_ocoan")
 autoplay = "default"
 frame_progress = 0.323844
