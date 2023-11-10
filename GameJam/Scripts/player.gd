@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export_category("Player Movement")
 @export var MAX_MOVE_SPEED : float = 400
-@export var accelaration : float = 50
+@export var accelaration : float = 80
 @export var deccelaration : float = 100
 @export var jump_force : float = -600.0
 
@@ -46,7 +46,9 @@ func manage_coyote_time()->void:
 func movement()->void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
+		velocity.x += accelaration * direction
+	else:
 		velocity.x = move_toward(velocity.x, 0, deccelaration)
-
+		
 	velocity.x = clampf(velocity.x,-MAX_MOVE_SPEED,MAX_MOVE_SPEED)
-	print(velocity.x)
+	

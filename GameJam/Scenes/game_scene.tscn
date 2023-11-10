@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://h3bltujuqw3d"]
+[gd_scene load_steps=5 format=3 uid="uid://h3bltujuqw3d"]
 
 [ext_resource type="Texture2D" uid="uid://c8pgdkpkyq20k" path="res://icon.svg" id="1_ab82f"]
+[ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_0vexw"]
 [ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="2_lgrao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ly6o"]
@@ -8,43 +9,61 @@ size = Vector2(130, 127)
 
 [node name="GameScene" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(691, 675)
-scale = Vector2(17.76, 0.64)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-self_modulate = Color(0, 1, 0.0156863, 1)
-texture = ExtResource("1_ab82f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_6ly6o")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(931, 521)
-scale = Vector2(2.17852, 0.245648)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
-self_modulate = Color(0, 1, 0.0156863, 1)
-texture = ExtResource("1_ab82f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_6ly6o")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(330, 393)
-scale = Vector2(2.17852, 0.245648)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-self_modulate = Color(0, 1, 0.0156863, 1)
-texture = ExtResource("1_ab82f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_6ly6o")
-
 [node name="Player" parent="." instance=ExtResource("2_lgrao")]
 position = Vector2(611, 390)
 scale = Vector2(0.5, 0.5)
 jump_force = -550.0
+
+[node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
+script = ExtResource("2_0vexw")
+ghost_dimension = NodePath("../GhostDimension")
+default_dimension = NodePath("../DefaultDimension")
+crossover_dimension = NodePath("../CrossDimension")
+player = NodePath("../Player")
+
+[node name="GhostDimension" type="Node2D" parent="."]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="GhostDimension"]
+modulate = Color(0, 0.517647, 1, 1)
+position = Vector2(931, 521)
+scale = Vector2(2.17852, 0.245648)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="GhostDimension/StaticBody2D2"]
+texture = ExtResource("1_ab82f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GhostDimension/StaticBody2D2"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6ly6o")
+
+[node name="DefaultDimension" type="Node2D" parent="."]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="DefaultDimension"]
+modulate = Color(1, 0.121569, 0.294118, 1)
+position = Vector2(330, 393)
+scale = Vector2(2.17852, 0.245648)
+collision_layer = 4
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DefaultDimension/StaticBody2D3"]
+texture = ExtResource("1_ab82f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DefaultDimension/StaticBody2D3"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6ly6o")
+
+[node name="CrossDimension" type="Node2D" parent="."]
+
+[node name="Ground" type="StaticBody2D" parent="CrossDimension"]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(691, 698)
+scale = Vector2(17.76, 0.64)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="CrossDimension/Ground"]
+texture = ExtResource("1_ab82f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrossDimension/Ground"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6ly6o")
