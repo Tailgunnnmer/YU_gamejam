@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://behuye4r8kcqd"]
+
+[ext_resource type="PackedScene" uid="uid://by5pqu8g1mdw8" path="res://Scenes/Platforms/orbital.tscn" id="1_yiwlw"]
+[ext_resource type="Texture2D" uid="uid://bep2qb4fvg2w" path="res://Assets/Platform/Black_White/BlackWhite/Platform/orb.png" id="2_wwxgk"]
+
+[node name="OrbitalBlack" instance=ExtResource("1_yiwlw")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_wwxgk")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmm7wgakxysu3"]
+
+[ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="1_in32t"]
+[ext_resource type="Texture2D" uid="uid://sh0b8jqqflye" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Cloud.png" id="2_due54"]
+
+[node name="VanishingBlackPlatform" instance=ExtResource("1_in32t")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_due54")

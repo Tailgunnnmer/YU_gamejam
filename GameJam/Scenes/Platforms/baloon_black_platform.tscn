@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx70d5osv680h"]
+
+[ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="1_6i7a7"]
+[ext_resource type="Texture2D" uid="uid://c5nra0s82lb0u" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Baloon.png" id="2_143fq"]
+
+[node name="BaloonBlackPlatform" instance=ExtResource("1_6i7a7")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_143fq")
