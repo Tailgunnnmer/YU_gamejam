@@ -42,7 +42,6 @@ func manage_coyote_time()->void:
 		coyote_timer -= get_process_delta_time()
 
 
-
 func movement()->void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
