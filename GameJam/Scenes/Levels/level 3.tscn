@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cs7el0pq4dasg"]
+[gd_scene load_steps=19 format=3 uid="uid://cs7el0pq4dasg"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_xfib7"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
@@ -15,10 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="13_3tgih"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="14_7xuud"]
 [ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="15_nc0bq"]
+[ext_resource type="PackedScene" uid="uid://by5pqu8g1mdw8" path="res://Scenes/Platforms/orbital.tscn" id="16_bilhp"]
+[ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="17_cq1pm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5r23d"]
 
 [node name="Base_level" instance=ExtResource("1_xfib7")]
+
+[node name="Player" parent="." index="0"]
+position = Vector2(0, -144)
+scale = Vector2(0.409714, 0.409714)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
 offset = Vector2(0, -150)
@@ -280,3 +286,20 @@ scale = Vector2(0.448974, 0.448974)
 position = Vector2(3734, 766)
 rotation = 3.00566
 scale = Vector2(0.604239, 0.604239)
+
+[node name="Orbital" parent="." index="55" instance=ExtResource("16_bilhp")]
+position = Vector2(3474, 1376)
+radius = Vector2(500, 100)
+
+[node name="MovingPlatform" parent="Orbital" index="2" instance=ExtResource("17_cq1pm")]
+
+[node name="MovingPlatform2" parent="Orbital" index="3" instance=ExtResource("17_cq1pm")]
+
+[node name="MovingPlatform3" parent="Orbital" index="4" instance=ExtResource("17_cq1pm")]
+position = Vector2(-3474, -1376)
+
+[node name="MovingPlatform4" parent="Orbital" index="5" instance=ExtResource("17_cq1pm")]
+
+[node name="MovingPlatform" parent="." index="56" instance=ExtResource("17_cq1pm")]
+position = Vector2(2550, 1236)
+scale = Vector2(2.88, 1)
