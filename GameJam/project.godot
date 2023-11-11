@@ -12,7 +12,10 @@ config_version=5
 
 config/name="GameJam"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/bg_color=Color(0.105882, 0.101961, 0.117647, 1)
+boot_splash/image="res://Serpentflame_Logo_1.0.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 

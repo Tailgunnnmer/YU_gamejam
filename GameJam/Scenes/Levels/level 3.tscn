@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="2_tqt0o"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="6_7mblg"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_4vyvc"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="10_tmdyt"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
