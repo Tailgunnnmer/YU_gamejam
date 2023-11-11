@@ -1,68 +1,95 @@
-[gd_scene load_steps=8 format=3 uid="uid://cedjis8mig21p"]
+[gd_scene load_steps=7 format=3 uid="uid://cedjis8mig21p"]
 
 [ext_resource type="Texture2D" uid="uid://cuediwt5vc3nq" path="res://Assets/Platform/Glow/B_Red_Middle.png" id="1_f0vvd"]
 [ext_resource type="Texture2D" uid="uid://blqithmjaaf0t" path="res://Assets/Platform/Glow/B_Red_L2.png" id="2_b8gh4"]
 [ext_resource type="Texture2D" uid="uid://bjhbn4x74nokv" path="res://Assets/Platform/Glow/B_Red_L1.png" id="3_nwnvu"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4d52o"]
-
 [sub_resource type="Animation" id="Animation_jc538"]
-resource_name = "roll"
+resource_name = "RESET"
+length = 3.00001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BRedMiddle/Node2D:rotation")
+tracks/0/path = NodePath("Node2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 6.28319]
 }
-
-[sub_resource type="Animation" id="Animation_5j238"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BRedMiddle/Node2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BRedMiddle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, -6.28319]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 4
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.532325, -0.785398, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2, 1.8, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 0.0842937),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-23, -18), Vector2(-9, 33), Vector2(44, -28), Vector2(63, 28), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l7my2"]
 _data = {
-"RESET": SubResource("Animation_5j238"),
-"roll": SubResource("Animation_jc538")
+"RESET": SubResource("Animation_jc538")
 }
 
-[node name="BRedMiddle" type="Sprite2D"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4d52o"]
+
+[node name="Red Root" type="Node2D"]
+
+[node name="Node2D2" type="Node2D" parent="."]
 modulate = Color(28.17, 0.37, 0.36, 1)
+position = Vector2(64.6696, 15.772)
+rotation = 5.67206
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_l7my2")
+}
+
+[node name="BRedMiddle" type="Sprite2D" parent="Node2D2"]
 material = SubResource("CanvasItemMaterial_4d52o")
-position = Vector2(565, 113)
-rotation = 0.00703482
+rotation = -4.68657
 texture = ExtResource("1_f0vvd")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="Node2D2"]
+rotation = 4.68657
 
-[node name="BRedL2" type="Sprite2D" parent="Node2D"]
+[node name="BRedL2" type="Sprite2D" parent="Node2D2/Node2D"]
 use_parent_material = true
 position = Vector2(56, 42)
 texture = ExtResource("2_b8gh4")
 
-[node name="BRedL1" type="Sprite2D" parent="Node2D"]
+[node name="BRedL1" type="Sprite2D" parent="Node2D2/Node2D"]
 use_parent_material = true
 position = Vector2(-58, -47)
 texture = ExtResource("3_nwnvu")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_l7my2")
-}

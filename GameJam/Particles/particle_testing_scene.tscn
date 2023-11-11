@@ -16,10 +16,20 @@ glow_hdr_threshold = 0.5
 environment = SubResource("Environment_g4kn0")
 
 [node name="BounceParticle" parent="." instance=ExtResource("1_nwsr2")]
+position = Vector2(331, 173)
 
-[node name="Red" parent="BounceParticle" instance=ExtResource("2_2nxgh")]
+[node name="Red" parent="." instance=ExtResource("2_2nxgh")]
+position = Vector2(345, 146)
+rotation = 0.528442
 
-[node name="BRedMiddle" parent="BounceParticle/Red" index="1"]
-modulate = Color(73.24, 0.37, 0.36, 1)
+[node name="Node2D2" parent="Red" index="0"]
+position = Vector2(64.4703, 25.6613)
+rotation = 5.77821
 
-[editable path="BounceParticle/Red"]
+[node name="BRedMiddle" parent="Red/Node2D2" index="1"]
+rotation = -4.91353
+
+[node name="Node2D" parent="Red/Node2D2" index="2"]
+rotation = 4.91353
+
+[editable path="Red"]
