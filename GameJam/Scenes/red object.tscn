@@ -68,21 +68,22 @@ _data = {
 
 [node name="Node2D2" type="Node2D" parent="."]
 modulate = Color(28.17, 0.37, 0.36, 1)
-position = Vector2(64.6696, 15.772)
-rotation = 5.67206
+position = Vector2(11.7687, 11.4532)
+rotation = 5.87762
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
+autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_l7my2")
 }
 
 [node name="BRedMiddle" type="Sprite2D" parent="Node2D2"]
 material = SubResource("CanvasItemMaterial_4d52o")
-rotation = -4.68657
+rotation = -3.03201
 texture = ExtResource("1_f0vvd")
 
 [node name="Node2D" type="Node2D" parent="Node2D2"]
-rotation = 4.68657
+rotation = 3.03201
 
 [node name="BRedL2" type="Sprite2D" parent="Node2D2/Node2D"]
 use_parent_material = true

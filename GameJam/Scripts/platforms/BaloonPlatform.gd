@@ -11,7 +11,3 @@ func _on_jump_area_body_entered(body:Node2D):
 		animator.play('bounce')
 		body.velocity += jump_force * bounce_direction
 
-func be_bounced(bouncer)->void:
-	if bouncer.has_method("bounce"):
-		bouncer.bounce()
-		animator.play('bounce')

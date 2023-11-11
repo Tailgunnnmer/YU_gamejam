@@ -10,19 +10,9 @@ size = Vector2(126, 128)
 z_index = -10
 platform_on_leave = 2
 script = ExtResource("1_q18oo")
-MAX_MOVE_SPEED = null
-accelaration = null
-deccelaration = null
-jump_force = null
-coyote_time = null
-raycast_container = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_djwgk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_m76ed")
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(0, 55)
-target_position = Vector2(0, 300)

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgfckltyff5nu"]
+
+[ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="1_18ehp"]
+[ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_aqqmv"]
+[ext_resource type="Script" path="res://Scripts/TimerUI.gd" id="3_s646r"]
+[ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="4_k60dc"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_18ehp")]
+scale = Vector2(0.5, 0.5)
+collision_mask = 5
+jump_force = -550.0
+
+[node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
+script = ExtResource("2_aqqmv")
+ghost_dimension = NodePath("../GhostDimension")
+default_dimension = NodePath("../DefaultDimension")
+crossover_dimension = NodePath("../CrossDimension")
+player = NodePath("../Player")
+
+[node name="GhostDimension" type="Node2D" parent="."]
+
+[node name="DefaultDimension" type="Node2D" parent="."]
+
+[node name="CrossDimension" type="Node2D" parent="."]
+
+[node name="TimerUI" type="CanvasLayer" parent="."]
+script = ExtResource("3_s646r")
+
+[node name="TimeLabel" type="Label" parent="TimerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -98.0
+offset_top = 23.0
+offset_right = -34.0
+offset_bottom = 49.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_k60dc")
+theme_override_font_sizes/font_size = 40
+text = "00:00:00"
+metadata/_edit_use_anchors_ = true
