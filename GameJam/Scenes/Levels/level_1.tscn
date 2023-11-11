@@ -1,128 +1,89 @@
-[gd_scene load_steps=13 format=3 uid="uid://cgfckltyff5nu"]
+[gd_scene load_steps=10 format=3 uid="uid://c8lv1gfv7kfin"]
 
-[ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="1_18ehp"]
-[ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_aqqmv"]
-[ext_resource type="Script" path="res://Scripts/TimerUI.gd" id="3_s646r"]
-[ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="4_k60dc"]
-[ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="5_d37ma"]
-[ext_resource type="Texture2D" uid="uid://dow4ghngetscj" path="res://Assets/Background/B_4_1.png" id="6_fdem2"]
-[ext_resource type="Texture2D" uid="uid://c47p2lnvgyrwk" path="res://Assets/Background/B_6_1.png" id="7_tucw6"]
-[ext_resource type="Texture2D" uid="uid://do210llfvcllf" path="res://Assets/Background/B_2_2.png" id="7_vuvto"]
-[ext_resource type="Texture2D" uid="uid://btyutqt5rvwdi" path="res://Assets/Background/B_3_1.png" id="8_eqw0l"]
-[ext_resource type="Texture2D" uid="uid://i1aca5j0gasa" path="res://Assets/Background/B_2_1.png" id="10_je1u0"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/moving_black_platform.tscn" id="11_hh3dd"]
+[ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
+[ext_resource type="PackedScene" uid="uid://by5pqu8g1mdw8" path="res://Scenes/Platforms/orbital.tscn" id="2_xki7a"]
+[ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="3_0g5en"]
+[ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
+[ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
+[ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
+[ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_8yvp6"]
+[ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
+[ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="9_o3d54"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_otnr1"]
+[node name="Level1" instance=ExtResource("1_2sygc")]
 
-[node name="Level1" type="Node2D"]
+[node name="Player" parent="." index="0"]
+position = Vector2(1480, 677)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(0.5, 0.5)
+[node name="Orbital" parent="." index="7" instance=ExtResource("2_xki7a")]
+position = Vector2(410, 704)
+radius = Vector2(300, 300)
 
-[node name="Player" parent="." instance=ExtResource("1_18ehp")]
-collision_mask = 5
-jump_force = -550.0
+[node name="MovingPlatform" parent="Orbital" index="2" instance=ExtResource("3_0g5en")]
+position = Vector2(-300, -2.61961e-10)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
-update_rotation = false
-update_scale = false
+[node name="MovingPlatform2" parent="Orbital" index="3" instance=ExtResource("3_0g5en")]
+position = Vector2(300, 2.61924e-10)
 
-[node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
-script = ExtResource("2_aqqmv")
-ghost_dimension = NodePath("../GhostDimension")
-default_dimension = NodePath("../DefaultDimension")
-crossover_dimension = NodePath("../CrossDimension")
-player = NodePath("../Player")
+[node name="MovingPlatform" parent="." index="8" instance=ExtResource("3_0g5en")]
+position = Vector2(1208, 1012)
+scale = Vector2(3.53903, 0.667526)
 
-[node name="GhostDimension" type="Node2D" parent="."]
+[node name="MovingPlatform2" parent="." index="9" instance=ExtResource("3_0g5en")]
+position = Vector2(897, 633)
+rotation = 1.57079
+scale = Vector2(1.21903, 0.665007)
 
-[node name="DefaultDimension" type="Node2D" parent="."]
+[node name="MovingPlatform3" parent="." index="10" instance=ExtResource("3_0g5en")]
+position = Vector2(2045, 77.9999)
+scale = Vector2(3.53903, 0.667526)
 
-[node name="CrossDimension" type="Node2D" parent="."]
+[node name="MovingPlatform4" parent="." index="11" instance=ExtResource("3_0g5en")]
+position = Vector2(1720, -229)
+rotation = 1.57237
+scale = Vector2(2.53903, 0.667526)
 
-[node name="TimerUI" type="CanvasLayer" parent="."]
-script = ExtResource("3_s646r")
+[node name="SpikedBall" parent="." index="12" instance=ExtResource("4_x1dcp")]
+position = Vector2(891, 284)
+scale = Vector2(0.886453, 0.886453)
 
-[node name="TimeLabel" type="Label" parent="TimerUI"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -98.0
-offset_top = 23.0
-offset_right = -34.0
-offset_bottom = 49.0
-grow_horizontal = 0
-theme_override_fonts/font = ExtResource("4_k60dc")
-theme_override_font_sizes/font_size = 40
-text = "00:00:00"
-metadata/_edit_use_anchors_ = true
+[node name="BaloonPlatform" parent="." index="13" instance=ExtResource("5_lo63w")]
+position = Vector2(1302, 511)
+rotation = -0.0227376
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
-
-[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(1920, 0)
-
-[node name="Artboard1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
-texture_repeat = 3
-position = Vector2(0, 540)
-texture = ExtResource("5_d37ma")
-
-[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 1)
-motion_offset = Vector2(1920, 0)
-motion_mirroring = Vector2(1920, 0)
-
-[node name="B41" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
-texture_repeat = 3
-position = Vector2(500, 540)
-texture = ExtResource("6_fdem2")
-
-[node name="B61" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
-texture_repeat = 3
-position = Vector2(-300, 540)
-texture = ExtResource("7_tucw6")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.7, 1)
-motion_mirroring = Vector2(1920, 0)
-
-[node name="B31" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_repeat = 3
-position = Vector2(893, 548)
-texture = ExtResource("8_eqw0l")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(2, 1)
-motion_mirroring = Vector2(1920, 0)
-
-[node name="B22" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_repeat = 3
-position = Vector2(0, 285)
-texture = ExtResource("7_vuvto")
-
-[node name="B21" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_repeat = 3
-position = Vector2(634, 277)
-scale = Vector2(1.92625, 1.5007)
-texture = ExtResource("10_je1u0")
-
-[node name="B23" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_repeat = 3
-position = Vector2(-699, 813)
+[node name="SpikeVar1" parent="." index="14" instance=ExtResource("6_k5tu8")]
+position = Vector2(1279, 193)
 rotation = -3.14159
-scale = Vector2(1.92625, 1.5007)
-texture = ExtResource("10_je1u0")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(856, 768)
+[node name="SpikeVar2" parent="." index="15" instance=ExtResource("6_k5tu8")]
+position = Vector2(-73, -30)
+rotation = -3.56446
+scale = Vector2(0.537145, 0.537145)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_otnr1")
+[node name="SpikeVar3" parent="." index="16" instance=ExtResource("6_k5tu8")]
+position = Vector2(-219, 85)
+rotation = -3.9284
+scale = Vector2(0.537145, 0.537145)
 
-[node name="MovingBlackPlatform" parent="." instance=ExtResource("11_hh3dd")]
-position = Vector2(-145, 166)
-rotation = 0.953919
-scale = Vector2(7.82101, 1)
+[node name="VanishingPlatform" parent="." index="17" instance=ExtResource("7_8yvp6")]
+position = Vector2(1266, -81)
+
+[node name="SpikeVar4" parent="." index="18" instance=ExtResource("8_hh6nw")]
+position = Vector2(-285, 236)
+rotation = 1.46965
+scale = Vector2(0.691933, 0.691933)
+
+[node name="SpikeVar6" parent="." index="19" instance=ExtResource("8_hh6nw")]
+position = Vector2(-159, 11)
+rotation = 1.98116
+scale = Vector2(0.390871, 0.390871)
+
+[node name="SpikeVar5" parent="." index="20" instance=ExtResource("9_o3d54")]
+position = Vector2(-329, 400)
+rotation = 1.68751
+scale = Vector2(0.713478, 0.713478)
+
+[node name="SpikeVar7" parent="." index="21" instance=ExtResource("9_o3d54")]
+position = Vector2(-276, 137)
+rotation = 1.68751
+scale = Vector2(0.313514, 0.313514)
