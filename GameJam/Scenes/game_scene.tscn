@@ -180,6 +180,7 @@ position = Vector2(591, 424)
 scale = Vector2(0.5, 0.5)
 collision_mask = 5
 jump_force = -550.0
+raycast_container = null
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
 script = ExtResource("2_0vexw")
@@ -197,13 +198,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(375.056, -330.656)
+position = Vector2(-349.832, -357.236)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(98.8287, 490.136)
+position = Vector2(484.292, -124.345)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-473.884, -159.48)
+position = Vector2(-134.46, 481.581)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
