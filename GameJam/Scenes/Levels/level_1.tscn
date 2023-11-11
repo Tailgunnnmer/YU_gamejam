@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="3_0g5en"]
 [ext_resource type="PackedScene" uid="uid://dvbpcqhloue4l" path="res://Scenes/Platforms/orbital_black.tscn" id="3_l4k8i"]
-[ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
+[ext_resource type="PackedScene" uid="uid://bgcdq2k2tkch1" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="9_o3d54"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="11_j2pp7"]
@@ -20,10 +20,9 @@
 
 [node name="Level1" instance=ExtResource("1_2sygc")]
 
-[node name="Player" parent="." index="0" node_paths=PackedStringArray("game_manager")]
-position = Vector2(1313, 781)
+[node name="Player" parent="." index="0"]
+position = Vector2(1120, 401)
 scale = Vector2(0.280378, 0.287408)
-game_manager = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
 position_smoothing_enabled = true
@@ -35,7 +34,7 @@ rotation = -0.0227376
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
-jump_force = 1100.0
+jump_force = 500.0
 
 [node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(1669, 77.9999)
@@ -147,15 +146,18 @@ motion_mirroring = Vector2(1920, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
 texture = ExtResource("11_j2pp7")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="1"]
 texture = ExtResource("12_25104")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="2"]
 position = Vector2(755.652, 0)
 texture = ExtResource("12_25104")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
 motion_scale = Vector2(0.2, 0.1)
@@ -164,11 +166,13 @@ motion_mirroring = Vector2(1920, 0)
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 texture = ExtResource("13_s3gdn")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="1"]
 position = Vector2(755, 0)
 texture = ExtResource("14_uwp63")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
 motion_scale = Vector2(0.5, 0.15)
@@ -177,13 +181,16 @@ motion_mirroring = Vector2(1920, 0)
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="0"]
 texture = ExtResource("15_352q6")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="1"]
 position = Vector2(755, 0)
 texture = ExtResource("16_2hryx")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="2"]
 position = Vector2(320, 0)
 texture = ExtResource("17_oiti3")
 centered = false
+metadata/_edit_lock_ = true
