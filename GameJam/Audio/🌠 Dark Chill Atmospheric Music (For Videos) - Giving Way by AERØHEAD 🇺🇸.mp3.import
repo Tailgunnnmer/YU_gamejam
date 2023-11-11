@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drxvdgseynvqd"
+path="res://.godot/imported/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3-c2501813ba6ba3ffea71aae0b96e0641.mp3str"
+
+[deps]
+
+source_file="res://Audio/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3"
+dest_files=["res://.godot/imported/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3-c2501813ba6ba3ffea71aae0b96e0641.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

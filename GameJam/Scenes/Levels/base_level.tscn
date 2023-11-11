@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgfckltyff5nu"]
+[gd_scene load_steps=8 format=3 uid="uid://cgfckltyff5nu"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_6ogtn"]
 [ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="1_d3bgk"]
 [ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_xgwko"]
 [ext_resource type="Script" path="res://Scripts/TimerUI.gd" id="3_q4sc0"]
 [ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="4_4tev4"]
+[ext_resource type="Texture2D" uid="uid://cx8l2ytmp5tjv" path="res://Assets/33401-1-soul-eater-transparent-thumb.png" id="6_6l26a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_otnr1"]
 
@@ -41,10 +42,40 @@ offset_top = 23.0
 offset_right = -34.0
 offset_bottom = 49.0
 grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("4_4tev4")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "00:00:00"
 metadata/_edit_use_anchors_ = true
+
+[node name="Goal Time" type="Label" parent="TimerUI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -108.0
+offset_right = -39.0
+offset_bottom = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_4tev4")
+theme_override_font_sizes/font_size = 50
+text = "10:10"
+
+[node name="TextureRect" type="TextureRect" parent="TimerUI/Goal Time"]
+layout_mode = 0
+offset_left = -74.0
+offset_right = -6.0
+offset_bottom = 68.0
+texture = ExtResource("6_6l26a")
+expand_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(987, 1634)

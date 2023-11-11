@@ -14,3 +14,4 @@ func _on_jump_area_body_entered(body:Node2D):
 func be_bounced(bouncer)->void:
 	bouncer.bounce(jump_force)
 	animator.play('bounce')
+	$AudioStreamPlayer2D.play()

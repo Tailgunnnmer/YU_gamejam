@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="3_0g5en"]
 [ext_resource type="PackedScene" uid="uid://dvbpcqhloue4l" path="res://Scenes/Platforms/orbital_black.tscn" id="3_l4k8i"]
-[ext_resource type="PackedScene" uid="uid://bgcdq2k2tkch1" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
+[ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="9_fv0t6"]
 [ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="9_o3d54"]
@@ -120,12 +120,10 @@ position = Vector2(1745, 1038)
 [node name="GPUParticles2D3" parent="WorldEnvironment" index="1" instance=ExtResource("9_fv0t6")]
 position = Vector2(1091, 1230)
 rotation = -1.62042
-scale = Vector2(1, 1)
 
 [node name="GPUParticles2D9" parent="WorldEnvironment" index="2" instance=ExtResource("9_fv0t6")]
 position = Vector2(2037, -187)
 rotation = -1.62042
-scale = Vector2(1, 1)
 
 [node name="GPUParticles2D10" parent="WorldEnvironment" index="3" instance=ExtResource("9_fv0t6")]
 position = Vector2(1115, -177)
@@ -149,7 +147,7 @@ rotation = 3.14159
 scale = Vector2(1.02932, 1.02932)
 
 [node name="Player" parent="." index="4"]
-position = Vector2(859, 3)
+position = Vector2(960, 884)
 scale = Vector2(0.280378, 0.287408)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
@@ -162,7 +160,7 @@ rotation = -0.0227376
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
-jump_force = 500.0
+jump_force = 400.0
 
 [node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(1935, 35)
@@ -216,19 +214,16 @@ rotation = 0.707588
 scale = Vector2(0.490473, 0.490473)
 
 [node name="SpikeVar8" parent="CrossDimension/Node2D2" index="0" instance=ExtResource("6_k5tu8")]
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar9" parent="CrossDimension/Node2D2" index="1" instance=ExtResource("6_k5tu8")]
 position = Vector2(450.832, -112.391)
 rotation = -0.36394
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar10" parent="CrossDimension/Node2D2" index="2" instance=ExtResource("8_hh6nw")]
 position = Vector2(756.215, -388.928)
 rotation = -1.24908
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar11" parent="CrossDimension/Node2D2" index="3" instance=ExtResource("8_hh6nw")]
@@ -239,7 +234,6 @@ isCrossDim = true
 [node name="SpikeVar12" parent="CrossDimension/Node2D2" index="4" instance=ExtResource("9_o3d54")]
 position = Vector2(1024.78, -717.673)
 rotation = -1.03122
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar13" parent="CrossDimension/Node2D2" index="5" instance=ExtResource("9_o3d54")]
@@ -310,23 +304,19 @@ scale = Vector2(0.490473, 0.490473)
 [node name="SpikeVar14" parent="CrossDimension/Node2D" index="0" instance=ExtResource("8_hh6nw")]
 position = Vector2(668.609, -214.345)
 rotation = -1.24908
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar8" parent="CrossDimension/Node2D" index="1" instance=ExtResource("6_k5tu8")]
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar9" parent="CrossDimension/Node2D" index="2" instance=ExtResource("6_k5tu8")]
 position = Vector2(450.832, -112.391)
 rotation = -0.36394
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar10" parent="CrossDimension/Node2D" index="3" instance=ExtResource("8_hh6nw")]
 position = Vector2(1087.39, -1003.82)
 rotation = -1.24908
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar11" parent="CrossDimension/Node2D" index="4" instance=ExtResource("8_hh6nw")]
@@ -337,7 +327,6 @@ isCrossDim = true
 [node name="SpikeVar12" parent="CrossDimension/Node2D" index="5" instance=ExtResource("9_o3d54")]
 position = Vector2(1024.78, -717.673)
 rotation = -1.03122
-scale = Vector2(1, 1)
 isCrossDim = true
 
 [node name="SpikeVar13" parent="CrossDimension/Node2D" index="6" instance=ExtResource("9_o3d54")]
@@ -347,9 +336,13 @@ scale = Vector2(1.21449, 1.21449)
 isCrossDim = true
 
 [node name="TimeLabel" parent="TimerUI" index="0"]
-offset_left = -556.0
-offset_right = -410.0
-offset_bottom = 74.0
+offset_left = -216.0
+offset_top = 44.0
+offset_right = -36.0
+offset_bottom = 107.0
+
+[node name="Goal Time" parent="TimerUI" index="1"]
+text = "00:14"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="11"]
 visible = false

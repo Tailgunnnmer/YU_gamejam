@@ -57,13 +57,13 @@ func movement()->void:
 	velocity.x = clampf(velocity.x,-MAX_MOVE_SPEED,MAX_MOVE_SPEED)
 
 func check_bounce()->void:
-	if !is_on_floor():
-		for ray in bounce_cast.get_children():
-			if ray.is_colliding(): 
-				var entity = ray.get_collider()
-				if entity.has_method("be_bounced"):
-					entity.call_deferred("be_bounced",self)
-					break
+	
+	for ray in bounce_cast.get_children():
+		if ray.is_colliding(): 
+			var entity = ray.get_collider()
+			if entity.has_method("be_bounced"):
+				entity.call_deferred("be_bounced",self)
+				break
 
 func bounce(value)->void:
 	velocity.y -= value
@@ -81,3 +81,5 @@ func SetRayCastCollisionsGhost()->void:
 
 func RestartLevel()->void:
 	game_manager.RestartGame()
+
+
