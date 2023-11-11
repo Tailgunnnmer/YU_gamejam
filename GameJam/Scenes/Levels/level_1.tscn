@@ -14,8 +14,9 @@
 [node name="Level1" instance=ExtResource("1_2sygc")]
 
 [node name="Player" parent="." index="0"]
-position = Vector2(1123, 358)
+position = Vector2(1125, 362)
 scale = Vector2(0.280378, 0.287408)
+collision_layer = 5
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
 
@@ -50,21 +51,21 @@ radius = Vector2(800, 900)
 rotation_duration = 8.0
 
 [node name="MovingBlackPlatform" parent="DefaultDimension/OrbitalBlack" index="2" instance=ExtResource("4_w7gwi")]
-position = Vector2(-135.48, 887)
+position = Vector2(487.009, 714.018)
 collision_layer = 4
 collision_mask = 4
+isMoving = true
 
 [node name="MovingBlackPlatform2" parent="DefaultDimension/OrbitalBlack" index="3" instance=ExtResource("4_w7gwi")]
-position = Vector2(135.48, -887)
+position = Vector2(-487.009, -714.018)
 scale = Vector2(1, 0.996835)
 collision_layer = 4
 collision_mask = 4
+isMoving = true
 
 [node name="VanishingBlackPlatform" parent="DefaultDimension" index="1" instance=ExtResource("7_b2vxu")]
 position = Vector2(1100, -33)
 scale = Vector2(0.6, 0.6)
-collision_layer = 4
-collision_mask = 4
 
 [node name="SpikedBall" parent="DefaultDimension" index="2" instance=ExtResource("4_x1dcp")]
 position = Vector2(857, 124)

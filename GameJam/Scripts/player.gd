@@ -11,6 +11,7 @@ extends CharacterBody2D
 var coyote_timer : float 
 
 @onready var bounce_cast : Node2D = get_node("RaycastContainer")
+@export var game_manager : Node2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity  : float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -66,3 +67,17 @@ func check_bounce()->void:
 
 func bounce(value)->void:
 	velocity.y -= value
+
+func SetRayCastCollisionsDefault()->void:
+	for ray in bounce_cast.get_children():
+		ray.set_collision_mask_value(3,true)
+		ray.set_collision_mask_value(2,false)
+
+
+func SetRayCastCollisionsGhost()->void:
+	for ray in bounce_cast.get_children():
+		ray.set_collision_mask_value(3,false)
+		ray.set_collision_mask_value(2,true)
+
+func RestartLevel()->void:
+	game_manager.RestartGame()

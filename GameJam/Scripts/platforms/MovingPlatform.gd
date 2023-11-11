@@ -4,14 +4,18 @@ extends CharacterBody2D
 @export var isMoving : bool
 @export var turnBackTime : float
 var timer : float
+var constY 
 
 func _ready():
 	timer = turnBackTime
+	constY = global_position.y
 
 func _physics_process(delta):
 	
 	if isMoving:
 		velocity = move_speed
+	else:
+		global_position.y = constY
 
 	timer -= delta
 	if timer <0:

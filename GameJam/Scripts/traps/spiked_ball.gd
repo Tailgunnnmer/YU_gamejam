@@ -5,9 +5,9 @@ extends Area2D
 var timer : float = -1
 
 func _on_body_entered(body:Node2D):
-
+	
 	if body.is_in_group("player"):
-		pass
+		body.RestartLevel()
 
 func _physics_process(delta):
 

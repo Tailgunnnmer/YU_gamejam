@@ -23,6 +23,10 @@ func _process(delta):
 				ResetDimension(ghost_dimension)
 				player.set_collision_mask_value(2,true)
 				player.set_collision_mask_value(3,false)
+				player.set_collision_layer_value(2,true)
+				player.set_collision_layer_value(3,false)
+				player.SetRayCastCollisionsGhost()
+				
 
 			dimensions.GHOST:
 				current_player_dimension = dimensions.DEFAULT
@@ -30,6 +34,9 @@ func _process(delta):
 				ResetDimension(default_dimension)
 				player.set_collision_mask_value(2,false)
 				player.set_collision_mask_value(3,true)
+				player.set_collision_layer_value(2,false)
+				player.set_collision_layer_value(3,true)
+				player.SetRayCastCollisionsDefault()
 
 		print(current_player_dimension)
 
