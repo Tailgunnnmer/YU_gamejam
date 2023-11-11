@@ -1,0 +1,282 @@
+[gd_scene load_steps=17 format=3 uid="uid://cs7el0pq4dasg"]
+
+[ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_xfib7"]
+[ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
+[ext_resource type="Texture2D" uid="uid://c47p2lnvgyrwk" path="res://Assets/Background/B_6_1.png" id="3_fqs4b"]
+[ext_resource type="Texture2D" uid="uid://dow4ghngetscj" path="res://Assets/Background/B_4_1.png" id="4_qiwda"]
+[ext_resource type="Texture2D" uid="uid://btyutqt5rvwdi" path="res://Assets/Background/B_3_1.png" id="5_y8jtc"]
+[ext_resource type="Texture2D" uid="uid://i1aca5j0gasa" path="res://Assets/Background/B_2_1.png" id="6_1isa7"]
+[ext_resource type="Texture2D" uid="uid://do210llfvcllf" path="res://Assets/Background/B_2_2.png" id="7_lhoy5"]
+[ext_resource type="Texture2D" uid="uid://cti47js0d00if" path="res://Assets/Background/B_1_3.png" id="8_vqhbw"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" uid="uid://bgcdq2k2tkch1" path="res://Scenes/Platforms/moving_black_platform.tscn" id="10_fciec"]
+[ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
+[ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
+[ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="13_3tgih"]
+[ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="14_7xuud"]
+[ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="15_nc0bq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5r23d"]
+
+[node name="Base_level" instance=ExtResource("1_xfib7")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
+offset = Vector2(0, -150)
+scale = Vector2(1.1, 1.3)
+transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+motion_scale = Vector2(0.2, 0.05)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+material = SubResource("CanvasItemMaterial_5r23d")
+texture = ExtResource("2_l6psc")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="1"]
+texture = ExtResource("3_fqs4b")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="2"]
+position = Vector2(755.652, 0)
+texture = ExtResource("3_fqs4b")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+motion_scale = Vector2(0.3, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+texture = ExtResource("4_qiwda")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="1"]
+position = Vector2(755, 0)
+texture = ExtResource("5_y8jtc")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+motion_scale = Vector2(0.7, 0.15)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="0"]
+texture = ExtResource("6_1isa7")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="1"]
+position = Vector2(755, 0)
+texture = ExtResource("7_lhoy5")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="2"]
+position = Vector2(320, 0)
+texture = ExtResource("8_vqhbw")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="VanishingBlackPlatform" parent="." index="9" instance=ExtResource("9_0ji3u")]
+position = Vector2(652, 400)
+
+[node name="VanishingBlackPlatform2" parent="." index="10" instance=ExtResource("9_0ji3u")]
+position = Vector2(1372, 400)
+
+[node name="VanishingBlackPlatform3" parent="." index="11" instance=ExtResource("9_0ji3u")]
+position = Vector2(2130, 400)
+
+[node name="VanishingBlackPlatform4" parent="." index="12" instance=ExtResource("9_0ji3u")]
+position = Vector2(2850, 400)
+
+[node name="VanishingBlackPlatform6" parent="." index="13" instance=ExtResource("9_0ji3u")]
+position = Vector2(2854, 505)
+
+[node name="VanishingBlackPlatform7" parent="." index="14" instance=ExtResource("9_0ji3u")]
+position = Vector2(3151, 161)
+rotation = -1.57079
+scale = Vector2(1.44, 1)
+
+[node name="MovingBlackPlatform" parent="." index="15" instance=ExtResource("10_fciec")]
+position = Vector2(3699, 432)
+
+[node name="MovingBlackPlatform2" parent="." index="16" instance=ExtResource("10_fciec")]
+position = Vector2(3699, 432)
+
+[node name="MovingBlackPlatform3" parent="." index="17" instance=ExtResource("10_fciec")]
+position = Vector2(4471, 1040)
+
+[node name="SpikedBall" parent="." index="18" instance=ExtResource("11_b011i")]
+position = Vector2(4232, 681)
+
+[node name="SpikedBall2" parent="." index="19" instance=ExtResource("11_b011i")]
+position = Vector2(4384, 672)
+rotation = 0.204761
+
+[node name="SpikeVar1" parent="." index="20" instance=ExtResource("12_ob1at")]
+position = Vector2(4546, 607)
+scale = Vector2(0.562759, 0.562759)
+
+[node name="SpikeVar2" parent="." index="21" instance=ExtResource("13_3tgih")]
+position = Vector2(4548, 680)
+rotation = 2.61799
+scale = Vector2(0.461946, 0.461946)
+
+[node name="BaloonPlatform" parent="." index="22" instance=ExtResource("14_7xuud")]
+position = Vector2(4307, 1335)
+
+[node name="BaloonPlatform2" parent="." index="23" instance=ExtResource("14_7xuud")]
+position = Vector2(4498, 1335)
+
+[node name="BaloonPlatform3" parent="." index="24" instance=ExtResource("14_7xuud")]
+position = Vector2(4705, 1335)
+scale = Vector2(1.01114, 0.994655)
+
+[node name="SpikeVar3" parent="." index="25" instance=ExtResource("12_ob1at")]
+position = Vector2(-31, 653)
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar4" parent="." index="26" instance=ExtResource("13_3tgih")]
+position = Vector2(97, 675)
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar5" parent="." index="27" instance=ExtResource("15_nc0bq")]
+position = Vector2(256, 662)
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar6" parent="." index="28" instance=ExtResource("12_ob1at")]
+position = Vector2(411, 653)
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar7" parent="." index="29" instance=ExtResource("13_3tgih")]
+position = Vector2(539, 675)
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar8" parent="." index="30" instance=ExtResource("15_nc0bq")]
+position = Vector2(698, 662)
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar9" parent="." index="31" instance=ExtResource("12_ob1at")]
+position = Vector2(855, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar10" parent="." index="32" instance=ExtResource("13_3tgih")]
+position = Vector2(983, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar11" parent="." index="33" instance=ExtResource("15_nc0bq")]
+position = Vector2(1142, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar12" parent="." index="34" instance=ExtResource("12_ob1at")]
+position = Vector2(1291, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar13" parent="." index="35" instance=ExtResource("13_3tgih")]
+position = Vector2(1419, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar14" parent="." index="36" instance=ExtResource("15_nc0bq")]
+position = Vector2(1578, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar15" parent="." index="37" instance=ExtResource("12_ob1at")]
+position = Vector2(1733, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar16" parent="." index="38" instance=ExtResource("13_3tgih")]
+position = Vector2(1861, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar17" parent="." index="39" instance=ExtResource("15_nc0bq")]
+position = Vector2(2020, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar18" parent="." index="40" instance=ExtResource("12_ob1at")]
+position = Vector2(2165, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar19" parent="." index="41" instance=ExtResource("13_3tgih")]
+position = Vector2(2293, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar20" parent="." index="42" instance=ExtResource("15_nc0bq")]
+position = Vector2(2452, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar21" parent="." index="43" instance=ExtResource("12_ob1at")]
+position = Vector2(2602, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar22" parent="." index="44" instance=ExtResource("13_3tgih")]
+position = Vector2(2730, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar23" parent="." index="45" instance=ExtResource("15_nc0bq")]
+position = Vector2(2889, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar24" parent="." index="46" instance=ExtResource("12_ob1at")]
+position = Vector2(3029, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar25" parent="." index="47" instance=ExtResource("13_3tgih")]
+position = Vector2(3157, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar26" parent="." index="48" instance=ExtResource("15_nc0bq")]
+position = Vector2(3316, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar27" parent="." index="49" instance=ExtResource("12_ob1at")]
+position = Vector2(3466, 653)
+rotation = -0.0203016
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar28" parent="." index="50" instance=ExtResource("13_3tgih")]
+position = Vector2(3594, 675)
+rotation = -0.0203016
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar29" parent="." index="51" instance=ExtResource("15_nc0bq")]
+position = Vector2(3753, 662)
+rotation = -0.0203016
+scale = Vector2(0.604239, 0.604239)
+
+[node name="SpikeVar30" parent="." index="52" instance=ExtResource("12_ob1at")]
+position = Vector2(3447, 757)
+rotation = 3.00566
+scale = Vector2(0.528531, 0.528531)
+
+[node name="SpikeVar31" parent="." index="53" instance=ExtResource("13_3tgih")]
+position = Vector2(3575, 779)
+rotation = 3.00566
+scale = Vector2(0.448974, 0.448974)
+
+[node name="SpikeVar32" parent="." index="54" instance=ExtResource("15_nc0bq")]
+position = Vector2(3734, 766)
+rotation = 3.00566
+scale = Vector2(0.604239, 0.604239)
