@@ -9,6 +9,7 @@
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="7_n1evy"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_otnr1"]
+distance = -164.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pskve"]
 shader = ExtResource("7_n1evy")
