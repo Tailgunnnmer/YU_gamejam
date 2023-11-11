@@ -1,16 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgfckltyff5nu"]
+[gd_scene load_steps=13 format=3 uid="uid://cgfckltyff5nu"]
 
 [ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="1_18ehp"]
 [ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_aqqmv"]
 [ext_resource type="Script" path="res://Scripts/TimerUI.gd" id="3_s646r"]
 [ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="4_k60dc"]
+[ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="5_d37ma"]
+[ext_resource type="Texture2D" uid="uid://dow4ghngetscj" path="res://Assets/Background/B_4_1.png" id="6_fdem2"]
+[ext_resource type="Texture2D" uid="uid://c47p2lnvgyrwk" path="res://Assets/Background/B_6_1.png" id="7_tucw6"]
+[ext_resource type="Texture2D" uid="uid://do210llfvcllf" path="res://Assets/Background/B_2_2.png" id="7_vuvto"]
+[ext_resource type="Texture2D" uid="uid://btyutqt5rvwdi" path="res://Assets/Background/B_3_1.png" id="8_eqw0l"]
+[ext_resource type="Texture2D" uid="uid://i1aca5j0gasa" path="res://Assets/Background/B_2_1.png" id="10_je1u0"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/moving_black_platform.tscn" id="11_hh3dd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_otnr1"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_18ehp")]
+[node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." instance=ExtResource("1_18ehp")]
 collision_mask = 5
 jump_force = -550.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+update_rotation = false
+update_scale = false
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
 script = ExtResource("2_aqqmv")
@@ -41,3 +57,72 @@ theme_override_fonts/font = ExtResource("4_k60dc")
 theme_override_font_sizes/font_size = 40
 text = "00:00:00"
 metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Artboard1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+texture_repeat = 3
+position = Vector2(0, 540)
+texture = ExtResource("5_d37ma")
+
+[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+motion_offset = Vector2(1920, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="B41" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
+texture_repeat = 3
+position = Vector2(500, 540)
+texture = ExtResource("6_fdem2")
+
+[node name="B61" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
+texture_repeat = 3
+position = Vector2(-300, 540)
+texture = ExtResource("7_tucw6")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="B31" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_repeat = 3
+position = Vector2(893, 548)
+texture = ExtResource("8_eqw0l")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="B22" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 3
+position = Vector2(0, 285)
+texture = ExtResource("7_vuvto")
+
+[node name="B21" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 3
+position = Vector2(634, 277)
+scale = Vector2(1.92625, 1.5007)
+texture = ExtResource("10_je1u0")
+
+[node name="B23" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 3
+position = Vector2(-699, 813)
+rotation = -3.14159
+scale = Vector2(1.92625, 1.5007)
+texture = ExtResource("10_je1u0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(856, 768)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_otnr1")
+
+[node name="MovingBlackPlatform" parent="." instance=ExtResource("11_hh3dd")]
+position = Vector2(-145, 166)
+rotation = 0.953919
+scale = Vector2(7.82101, 1)
