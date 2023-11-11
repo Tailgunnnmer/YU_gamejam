@@ -34,7 +34,13 @@ isMoving = true
 turnBackTime = 1.0
 
 [node name="MovingPlatform4" parent="GhostDimension" index="2" instance=ExtResource("9_bgc67")]
-position = Vector2(2149, 325)
+position = Vector2(2144, 283)
+move_speed = Vector2(200, 0)
+isMoving = true
+turnBackTime = 1.0
+
+[node name="MovingPlatform5" parent="GhostDimension" index="3" instance=ExtResource("9_bgc67")]
+position = Vector2(2147, 545)
 move_speed = Vector2(200, 0)
 isMoving = true
 turnBackTime = 1.0
@@ -57,8 +63,8 @@ position = Vector2(-194, 410)
 scale = Vector2(2.91911, 1)
 
 [node name="MovingPlatform6" parent="CrossDimension" index="2" instance=ExtResource("9_bgc67")]
-position = Vector2(2583, 815)
-rotation = 1.03137
+position = Vector2(2566, 853)
+rotation = 1.01296
 scale = Vector2(3.81893, 1)
 
 [node name="ColorRect" parent="TransitionCanvas" index="0"]
