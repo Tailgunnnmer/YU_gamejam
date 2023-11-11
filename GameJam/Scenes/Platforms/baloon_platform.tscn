@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bye13ihk2dwmm"]
+[gd_scene load_steps=10 format=3 uid="uid://bye13ihk2dwmm"]
 
 [ext_resource type="Script" path="res://Scripts/platforms/BaloonPlatform.gd" id="1_t5rhn"]
 [ext_resource type="Texture2D" uid="uid://ctfdt3ghhly25" path="res://Assets/Platform/Platform/Baloon.png" id="2_ejco8"]
 [ext_resource type="PackedScene" uid="uid://bgrjvdl72tkd7" path="res://Particles/bounce_particle.tscn" id="3_5umj4"]
+[ext_resource type="AudioStream" uid="uid://kkb1dmn36eis" path="res://Audio/2023-11-11 15-32-29.ogg" id="4_se8an"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ob1sq"]
 radius = 86.0233
@@ -123,3 +124,6 @@ libraries = {
 [node name="BounceParticle" parent="." instance=ExtResource("3_5umj4")]
 show_behind_parent = true
 position = Vector2(4, 70)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_se8an")
