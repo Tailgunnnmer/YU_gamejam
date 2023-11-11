@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bye13ihk2dwmm"]
+[gd_scene load_steps=9 format=3 uid="uid://bye13ihk2dwmm"]
 
 [ext_resource type="Script" path="res://Scripts/platforms/BaloonPlatform.gd" id="1_t5rhn"]
 [ext_resource type="Texture2D" uid="uid://ctfdt3ghhly25" path="res://Assets/Platform/Platform/Baloon.png" id="2_ejco8"]
+[ext_resource type="PackedScene" uid="uid://bgrjvdl72tkd7" path="res://Particles/bounce_particle.tscn" id="3_5umj4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ob1sq"]
 radius = 86.0233
@@ -35,6 +36,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../BounceParticle:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_5qaer"]
 resource_name = "bounce"
@@ -62,6 +75,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0663225, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../BounceParticle:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jwjqr"]
@@ -94,3 +119,7 @@ root_node = NodePath("../Sprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_jwjqr")
 }
+
+[node name="BounceParticle" parent="." instance=ExtResource("3_5umj4")]
+show_behind_parent = true
+position = Vector2(4, 70)
