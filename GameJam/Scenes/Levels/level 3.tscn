@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="6_7mblg"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_4vyvc"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="10_tmdyt"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
@@ -45,7 +45,7 @@ adjustment_saturation = 1.05
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5r23d"]
 
 [node name="Base_level" node_paths=PackedStringArray("ghost_background", "default_background") instance=ExtResource("1_xfib7")]
-expectedTime = 22.0
+expectedTime = 20.0
 ghost_background = NodePath("Ghost")
 default_background = NodePath("Default")
 
@@ -173,7 +173,8 @@ collision_layer = 1
 collision_mask = 1
 
 [node name="Goal Time" parent="TimerUI" index="1"]
-text = "00:22"
+text = "00:20
+"
 
 [node name="ColorRect" parent="TransitionCanvas" index="0"]
 metadata/_edit_lock_ = true
