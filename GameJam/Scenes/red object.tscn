@@ -92,7 +92,7 @@ turbulence_noise_strength = 18.35
 [node name="Red Root" type="Node2D"]
 
 [node name="Node2D2" type="Node2D" parent="."]
-modulate = Color(100, 0.37, 0.36, 1)
+modulate = Color(0, 35.21, 38.03, 1)
 material = SubResource("CanvasItemMaterial_omfcv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
