@@ -6,16 +6,16 @@ extends CharacterBody2D
 var timer : float
 
 func _ready():
-    timer = turnBackTime
+	timer = turnBackTime
 
 func _physics_process(delta):
-    
-    if isMoving:
-        velocity = move_speed
+	
+	if isMoving:
+		velocity = move_speed
 
-    timer -= delta
-    if timer <0:
-        move_speed *= -1
-        timer = turnBackTime
-    
-    move_and_slide()
+	timer -= delta
+	if timer <0:
+		move_speed *= -1
+		timer = turnBackTime
+	
+	move_and_slide()

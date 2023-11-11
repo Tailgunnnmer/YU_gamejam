@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=11 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
-[ext_resource type="PackedScene" uid="uid://by5pqu8g1mdw8" path="res://Scenes/Platforms/orbital.tscn" id="2_xki7a"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="3_0g5en"]
+[ext_resource type="PackedScene" uid="uid://dvbpcqhloue4l" path="res://Scenes/Platforms/orbital_black.tscn" id="3_l4k8i"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_8yvp6"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="9_o3d54"]
 
@@ -14,76 +15,97 @@
 
 [node name="Player" parent="." index="0"]
 position = Vector2(1480, 677)
+scale = Vector2(0.280378, 0.287408)
+collision_mask = 3
 
-[node name="Orbital" parent="." index="7" instance=ExtResource("2_xki7a")]
-position = Vector2(410, 704)
-radius = Vector2(300, 300)
+[node name="BaloonPlatform" parent="GhostDimension" index="0" instance=ExtResource("5_lo63w")]
+position = Vector2(1302, 511)
+rotation = -0.0227376
+scale = Vector2(1, 1)
+collision_layer = 2
+collision_mask = 2
 
-[node name="MovingPlatform" parent="Orbital" index="2" instance=ExtResource("3_0g5en")]
-position = Vector2(-300, -2.61961e-10)
-
-[node name="MovingPlatform2" parent="Orbital" index="3" instance=ExtResource("3_0g5en")]
-position = Vector2(300, 2.61924e-10)
-
-[node name="MovingPlatform" parent="." index="8" instance=ExtResource("3_0g5en")]
-position = Vector2(1208, 1012)
-scale = Vector2(3.53903, 0.667526)
-
-[node name="MovingPlatform2" parent="." index="9" instance=ExtResource("3_0g5en")]
-position = Vector2(897, 633)
-rotation = 1.57079
-scale = Vector2(1.21903, 0.665007)
-
-[node name="MovingPlatform3" parent="." index="10" instance=ExtResource("3_0g5en")]
+[node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(2045, 77.9999)
 scale = Vector2(3.53903, 0.667526)
 
-[node name="MovingPlatform4" parent="." index="11" instance=ExtResource("3_0g5en")]
-position = Vector2(1720, -229)
-rotation = 1.57237
-scale = Vector2(2.53903, 0.667526)
-
-[node name="SpikedBall" parent="." index="12" instance=ExtResource("4_x1dcp")]
-position = Vector2(891, 284)
-scale = Vector2(0.886453, 0.886453)
-
-[node name="BaloonPlatform" parent="." index="13" instance=ExtResource("5_lo63w")]
-position = Vector2(1302, 511)
-rotation = -0.0227376
-
-[node name="SpikeVar1" parent="." index="14" instance=ExtResource("6_k5tu8")]
+[node name="SpikeVar1" parent="GhostDimension" index="2" instance=ExtResource("6_k5tu8")]
 position = Vector2(1279, 193)
 rotation = -3.14159
+scale = Vector2(0.54923, 0.54923)
+collision_layer = 2
+collision_mask = 2
 
-[node name="SpikeVar2" parent="." index="15" instance=ExtResource("6_k5tu8")]
+[node name="MovingPlatform2" parent="GhostDimension" index="3" instance=ExtResource("3_0g5en")]
+position = Vector2(861, 821)
+rotation = 1.57079
+scale = Vector2(1.71406, 0.646111)
+
+[node name="OrbitalBlack" parent="DefaultDimension" index="0" instance=ExtResource("3_l4k8i")]
+position = Vector2(399, 818)
+radius = Vector2(350, 400)
+
+[node name="MovingBlackPlatform" parent="DefaultDimension/OrbitalBlack" index="2" instance=ExtResource("4_w7gwi")]
+position = Vector2(-293.535, 217.856)
+collision_layer = 4
+collision_mask = 4
+
+[node name="MovingBlackPlatform2" parent="DefaultDimension/OrbitalBlack" index="3" instance=ExtResource("4_w7gwi")]
+position = Vector2(293.535, -217.856)
+scale = Vector2(1, 0.996835)
+collision_layer = 4
+collision_mask = 4
+
+[node name="VanishingBlackPlatform" parent="DefaultDimension" index="1" instance=ExtResource("7_b2vxu")]
+position = Vector2(1272, -97)
+collision_layer = 4
+collision_mask = 4
+
+[node name="SpikedBall" parent="DefaultDimension" index="2" instance=ExtResource("4_x1dcp")]
+position = Vector2(891, 284)
+scale = Vector2(0.886453, 0.886453)
+collision_layer = 4
+collision_mask = 4
+
+[node name="MovingBlackPlatform" parent="DefaultDimension" index="3" instance=ExtResource("4_w7gwi")]
+position = Vector2(1720, -229)
+rotation = 1.57237
+scale = Vector2(2.54854, 0.670628)
+collision_layer = 4
+collision_mask = 4
+
+[node name="MovingPlatform" parent="CrossDimension" index="0" instance=ExtResource("3_0g5en")]
+position = Vector2(1208, 1012)
+scale = Vector2(3.53903, 0.667526)
+collision_layer = 1
+collision_mask = 1
+
+[node name="SpikeVar2" parent="CrossDimension" index="1" instance=ExtResource("6_k5tu8")]
 position = Vector2(-73, -30)
-rotation = -3.56446
+rotation = 2.71873
 scale = Vector2(0.537145, 0.537145)
 
-[node name="SpikeVar3" parent="." index="16" instance=ExtResource("6_k5tu8")]
+[node name="SpikeVar3" parent="CrossDimension" index="2" instance=ExtResource("6_k5tu8")]
 position = Vector2(-219, 85)
-rotation = -3.9284
+rotation = 2.35479
 scale = Vector2(0.537145, 0.537145)
 
-[node name="VanishingPlatform" parent="." index="17" instance=ExtResource("7_8yvp6")]
-position = Vector2(1266, -81)
-
-[node name="SpikeVar4" parent="." index="18" instance=ExtResource("8_hh6nw")]
+[node name="SpikeVar4" parent="CrossDimension" index="3" instance=ExtResource("8_hh6nw")]
 position = Vector2(-285, 236)
 rotation = 1.46965
 scale = Vector2(0.691933, 0.691933)
 
-[node name="SpikeVar6" parent="." index="19" instance=ExtResource("8_hh6nw")]
+[node name="SpikeVar6" parent="CrossDimension" index="4" instance=ExtResource("8_hh6nw")]
 position = Vector2(-159, 11)
 rotation = 1.98116
 scale = Vector2(0.390871, 0.390871)
 
-[node name="SpikeVar5" parent="." index="20" instance=ExtResource("9_o3d54")]
+[node name="SpikeVar5" parent="CrossDimension" index="5" instance=ExtResource("9_o3d54")]
 position = Vector2(-329, 400)
 rotation = 1.68751
 scale = Vector2(0.713478, 0.713478)
 
-[node name="SpikeVar7" parent="." index="21" instance=ExtResource("9_o3d54")]
+[node name="SpikeVar7" parent="CrossDimension" index="6" instance=ExtResource("9_o3d54")]
 position = Vector2(-276, 137)
 rotation = 1.68751
 scale = Vector2(0.313514, 0.313514)
