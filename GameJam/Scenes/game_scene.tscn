@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://h3bltujuqw3d"]
+[gd_scene load_steps=14 format=3 uid="uid://h3bltujuqw3d"]
 
 [ext_resource type="Texture2D" uid="uid://c8pgdkpkyq20k" path="res://icon.svg" id="1_ab82f"]
 [ext_resource type="Script" path="res://Scripts/DimensionManager.gd" id="2_0vexw"]
@@ -10,7 +10,6 @@
 [ext_resource type="FontFile" uid="uid://cu3bl8jd14oib" path="res://Assets/Font_Roboto-Thin.ttf" id="6_6ka2g"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="7_p3sx1"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="8_txksb"]
-[ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="11_56326"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ly6o"]
 size = Vector2(130, 127)
@@ -180,7 +179,11 @@ sources/0 = SubResource("TileSetAtlasSource_fntw0")
 position = Vector2(591, 424)
 scale = Vector2(0.5, 0.5)
 collision_mask = 5
+MAX_MOVE_SPEED = 400.0
+accelaration = 80.0
+deccelaration = 100.0
 jump_force = -550.0
+coyote_time = 0.05
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
 script = ExtResource("2_0vexw")
@@ -198,13 +201,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-236.275, 440.652)
+position = Vector2(-318.712, -385.257)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-263.478, -424.946)
+position = Vector2(492.998, -83.3844)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(499.753, -15.7054)
+position = Vector2(-174.286, 468.641)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
@@ -233,7 +236,7 @@ layer_0/tile_data = PackedInt32Array(851968, 0, 0, 851969, 65536, 0, 851970, 655
 [node name="BaloonPlatform" parent="CrossDimension" instance=ExtResource("7_p3sx1")]
 position = Vector2(88, 583)
 scale = Vector2(0.4, 0.4)
-jump_force = 500.0
+jump_force = 200.0
 
 [node name="VanishingPlatform" parent="CrossDimension" instance=ExtResource("8_txksb")]
 position = Vector2(321, 550)
@@ -255,6 +258,3 @@ theme_override_fonts/font = ExtResource("6_6ka2g")
 theme_override_font_sizes/font_size = 40
 text = "00:00:00"
 metadata/_edit_use_anchors_ = true
-
-[node name="Red Root" parent="." instance=ExtResource("11_56326")]
-position = Vector2(87, 222)

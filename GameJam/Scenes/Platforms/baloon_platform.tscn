@@ -123,5 +123,3 @@ libraries = {
 [node name="BounceParticle" parent="." instance=ExtResource("3_5umj4")]
 show_behind_parent = true
 position = Vector2(4, 70)
-
-[connection signal="body_entered" from="JumpArea" to="." method="_on_jump_area_body_entered"]
