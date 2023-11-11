@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cawkmdwape13t"]
+[gd_scene load_steps=3 format=3 uid="uid://bgcdq2k2tkch1"]
 
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="1_ubms7"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="2_0ttsl"]
