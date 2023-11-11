@@ -1,24 +1,31 @@
-[gd_scene load_steps=25 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=32 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="3_0g5en"]
 [ext_resource type="PackedScene" uid="uid://dvbpcqhloue4l" path="res://Scenes/Platforms/orbital_black.tscn" id="3_l4k8i"]
+[ext_resource type="Texture2D" uid="uid://o1dj8c3gf4ho" path="res://Assets/Background_1.2_Blur/B_Blur/B_6_1.png" id="3_v3es0"]
+[ext_resource type="Texture2D" uid="uid://dqe0hx3x6yayd" path="res://Assets/Background_1.2_Blur/B_Blur/B_4_1.png" id="4_baw1f"]
 [ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
+[ext_resource type="Texture2D" uid="uid://dwwaaqsggdsrq" path="res://Assets/Background_1.2_Blur/B_Blur/B_3_1.png" id="5_ywq87"]
+[ext_resource type="Texture2D" uid="uid://djk5t8qmm3dwi" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_1.png" id="6_e3vy3"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
 [ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="Texture2D" uid="uid://cak6bmua8cw6" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_2.png" id="7_b71ws"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
+[ext_resource type="Texture2D" uid="uid://b0tlh30xcot4c" path="res://Assets/Background_1.2_Blur/B_Blur/B_1_3.png" id="8_ybkpd"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="9_fv0t6"]
+[ext_resource type="Texture2D" uid="uid://dvtqpkyfmvf57" path="res://Assets/Background_1.2_Blur/Black_White/B_Background_white_Black.png" id="9_lo7mp"]
 [ext_resource type="PackedScene" uid="uid://1vrk3ilh8u37" path="res://Scenes/Trap/spike_var_3.tscn" id="9_o3d54"]
+[ext_resource type="Texture2D" uid="uid://dy5apjxjyt68d" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_6_1.png" id="10_vttl6"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="11_j2pp7"]
-[ext_resource type="Texture2D" uid="uid://c47p2lnvgyrwk" path="res://Assets/Background/B_6_1.png" id="12_25104"]
-[ext_resource type="Texture2D" uid="uid://dow4ghngetscj" path="res://Assets/Background/B_4_1.png" id="13_s3gdn"]
-[ext_resource type="Texture2D" uid="uid://btyutqt5rvwdi" path="res://Assets/Background/B_3_1.png" id="14_uwp63"]
-[ext_resource type="Texture2D" uid="uid://i1aca5j0gasa" path="res://Assets/Background/B_2_1.png" id="15_352q6"]
-[ext_resource type="Texture2D" uid="uid://do210llfvcllf" path="res://Assets/Background/B_2_2.png" id="16_2hryx"]
-[ext_resource type="Texture2D" uid="uid://cti47js0d00if" path="res://Assets/Background/B_1_3.png" id="17_oiti3"]
+[ext_resource type="Texture2D" uid="uid://j5hsjsapi7fe" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_4_1.png" id="11_jrp4j"]
+[ext_resource type="Texture2D" uid="uid://cjqo7r2kdc1ww" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_3_1.png" id="12_7aum4"]
+[ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="13_uq71u"]
+[ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="14_5f4iw"]
+[ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="15_u81xt"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
 
@@ -47,71 +54,136 @@ adjustment_color_correction = SubResource("GradientTexture1D_jv4w4")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_agxpq"]
 
-[node name="Level1" instance=ExtResource("1_2sygc")]
+[node name="Level1" node_paths=PackedStringArray("ghost_background", "default_background") instance=ExtResource("1_2sygc")]
+ghost_background = NodePath("Ghost")
+default_background = NodePath("Default")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
+[node name="Ghost" type="ParallaxBackground" parent="." index="0"]
+visible = false
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
 transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Ghost" index="0"]
 motion_scale = Vector2(0.2, 0.05)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="0"]
+[node name="Sprite2D" type="Sprite2D" parent="Ghost/ParallaxLayer" index="0"]
 material = SubResource("CanvasItemMaterial_p7g1l")
 texture = ExtResource("11_j2pp7")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="1"]
-texture = ExtResource("12_25104")
+[node name="Sprite2D3" type="Sprite2D" parent="Ghost/ParallaxLayer" index="1"]
+texture = ExtResource("3_v3es0")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" index="2"]
+[node name="Sprite2D4" type="Sprite2D" parent="Ghost/ParallaxLayer" index="2"]
 position = Vector2(755.652, 0)
-texture = ExtResource("12_25104")
+texture = ExtResource("3_v3es0")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Ghost" index="1"]
 motion_scale = Vector2(0.3, 0.1)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="0"]
-texture = ExtResource("13_s3gdn")
+[node name="Sprite2D2" type="Sprite2D" parent="Ghost/ParallaxLayer2" index="0"]
+texture = ExtResource("4_baw1f")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" index="1"]
+[node name="Sprite2D4" type="Sprite2D" parent="Ghost/ParallaxLayer2" index="1"]
 position = Vector2(755, 0)
-texture = ExtResource("14_uwp63")
+texture = ExtResource("5_ywq87")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Ghost" index="2"]
 motion_scale = Vector2(0.7, 0.15)
 motion_mirroring = Vector2(1920, 0)
 
-[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="0"]
-texture = ExtResource("15_352q6")
+[node name="Sprite2D2" type="Sprite2D" parent="Ghost/ParallaxLayer3" index="0"]
+texture = ExtResource("6_e3vy3")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="1"]
+[node name="Sprite2D4" type="Sprite2D" parent="Ghost/ParallaxLayer3" index="1"]
 position = Vector2(755, 0)
-texture = ExtResource("16_2hryx")
+texture = ExtResource("7_b71ws")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" index="2"]
+[node name="Sprite2D5" type="Sprite2D" parent="Ghost/ParallaxLayer3" index="2"]
 position = Vector2(320, 0)
-texture = ExtResource("17_oiti3")
+texture = ExtResource("8_ybkpd")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+[node name="Default" type="ParallaxBackground" parent="." index="1"]
+offset = Vector2(0, -150)
+scale = Vector2(1.1, 1.3)
+transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Default" index="0"]
+motion_scale = Vector2(0.2, 0.05)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Default/ParallaxLayer" index="0"]
+material = SubResource("CanvasItemMaterial_p7g1l")
+texture = ExtResource("9_lo7mp")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Default/ParallaxLayer" index="1"]
+texture = ExtResource("10_vttl6")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Default/ParallaxLayer" index="2"]
+position = Vector2(755.652, 0)
+texture = ExtResource("10_vttl6")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Default" index="1"]
+motion_scale = Vector2(0.3, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Default/ParallaxLayer2" index="0"]
+texture = ExtResource("11_jrp4j")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Default/ParallaxLayer2" index="1"]
+position = Vector2(755, 0)
+texture = ExtResource("12_7aum4")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Default" index="2"]
+motion_scale = Vector2(0.7, 0.15)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Default/ParallaxLayer3" index="0"]
+texture = ExtResource("13_uq71u")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Default/ParallaxLayer3" index="1"]
+position = Vector2(755, 0)
+texture = ExtResource("14_5f4iw")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="Default/ParallaxLayer3" index="2"]
+position = Vector2(320, 0)
+texture = ExtResource("15_u81xt")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 environment = SubResource("Environment_t4h3v")
 
 [node name="GPUParticles2D2" parent="WorldEnvironment" index="0" instance=ExtResource("9_fv0t6")]
@@ -135,18 +207,18 @@ rotation = 0.116079
 
 [node name="PointLight2D" type="PointLight2D" parent="WorldEnvironment" index="5"]
 
-[node name="Red Root" parent="." index="2" instance=ExtResource("2_xbeht")]
+[node name="Red Root" parent="." index="3" instance=ExtResource("2_xbeht")]
 position = Vector2(283, 469)
 scale = Vector2(0.315484, 0.315484)
 
-[node name="Red Root2" parent="." index="3" instance=ExtResource("2_xbeht")]
+[node name="Red Root2" parent="." index="4" instance=ExtResource("2_xbeht")]
 modulate = Color(100, 1, 1, 1)
 material = SubResource("CanvasItemMaterial_agxpq")
 position = Vector2(1491, 232)
 rotation = 3.14159
 scale = Vector2(1.02932, 1.02932)
 
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="5"]
 position = Vector2(960, 884)
 scale = Vector2(0.280378, 0.287408)
 
@@ -344,7 +416,7 @@ offset_bottom = 107.0
 [node name="Goal Time" parent="TimerUI" index="1"]
 text = "00:14"
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="11"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="12"]
 visible = false
 position = Vector2(182, -302)
 rotation = -0.496984
