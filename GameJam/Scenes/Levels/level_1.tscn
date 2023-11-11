@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=26 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://i1aca5j0gasa" path="res://Assets/Background/B_2_1.png" id="15_352q6"]
 [ext_resource type="Texture2D" uid="uid://do210llfvcllf" path="res://Assets/Background/B_2_2.png" id="16_2hryx"]
 [ext_resource type="Texture2D" uid="uid://cti47js0d00if" path="res://Assets/Background/B_1_3.png" id="17_oiti3"]
+[ext_resource type="AudioStream" uid="uid://benx5gmq3owfp" path="res://Audio/main.ogg" id="20_031p6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
 
@@ -349,3 +350,6 @@ visible = false
 position = Vector2(182, -302)
 rotation = -0.496984
 shadow_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="12"]
+stream = ExtResource("20_031p6")
