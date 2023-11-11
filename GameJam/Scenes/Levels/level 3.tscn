@@ -23,7 +23,7 @@
 [node name="Base_level" instance=ExtResource("1_xfib7")]
 
 [node name="Player" parent="." index="0"]
-position = Vector2(0, -144)
+position = Vector2(0, 216)
 scale = Vector2(0.409714, 0.409714)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="8"]
@@ -296,7 +296,7 @@ radius = Vector2(500, 100)
 [node name="MovingPlatform2" parent="Orbital" index="3" instance=ExtResource("17_cq1pm")]
 
 [node name="MovingPlatform3" parent="Orbital" index="4" instance=ExtResource("17_cq1pm")]
-position = Vector2(-3474, -1376)
+position = Vector2(-3474, -950)
 
 [node name="MovingPlatform4" parent="Orbital" index="5" instance=ExtResource("17_cq1pm")]
 
