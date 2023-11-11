@@ -94,5 +94,3 @@ root_node = NodePath("../Sprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_jwjqr")
 }
-
-[connection signal="body_entered" from="JumpArea" to="." method="_on_jump_area_body_entered"]

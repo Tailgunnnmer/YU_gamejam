@@ -10,6 +10,9 @@ extends CharacterBody2D
 @export var coyote_time : float = 0.05
 var coyote_timer : float 
 
+@export_category("Nodes")
+@export var bounce_cast : RayCast2D
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity  : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -17,7 +20,7 @@ var gravity  : float = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	# Add the gravity.
 	apply_gravity(delta)
-
+	check_bounce(delta)
 	# Handle Jump.
 	manage_coyote_time()
 	handle_jump()
@@ -51,3 +54,9 @@ func movement()->void:
 		
 	velocity.x = clampf(velocity.x,-MAX_MOVE_SPEED,MAX_MOVE_SPEED)
 	
+func check_bounce(delta)->void:
+	if velocity.y >0:
+		
+
+func bounce()->void:
+	velocity.y = -400

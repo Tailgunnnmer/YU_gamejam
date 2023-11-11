@@ -6,13 +6,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m76ed"]
 size = Vector2(126, 128)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("raycast_container") groups=["player"]]
 z_index = -10
 platform_on_leave = 2
 script = ExtResource("1_q18oo")
+MAX_MOVE_SPEED = null
+accelaration = null
+deccelaration = null
+jump_force = null
+coyote_time = null
+raycast_container = NodePath("")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_djwgk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_m76ed")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 55)
+target_position = Vector2(0, 300)
