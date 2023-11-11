@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kkb1dmn36eis"
+path="res://.godot/imported/2023-11-11 15-32-29.ogg-185dde78b530fb5ecc295e067e79752a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/2023-11-11 15-32-29.ogg"
+dest_files=["res://.godot/imported/2023-11-11 15-32-29.ogg-185dde78b530fb5ecc295e067e79752a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -179,11 +179,7 @@ sources/0 = SubResource("TileSetAtlasSource_fntw0")
 position = Vector2(591, 424)
 scale = Vector2(0.5, 0.5)
 collision_mask = 5
-MAX_MOVE_SPEED = 400.0
-accelaration = 80.0
-deccelaration = 100.0
 jump_force = -550.0
-coyote_time = 0.05
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
 script = ExtResource("2_0vexw")
@@ -201,13 +197,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-318.712, -385.257)
+position = Vector2(310.574, -391.847)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(492.998, -83.3844)
+position = Vector2(184.062, 464.888)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-174.286, 468.641)
+position = Vector2(-494.636, -73.0415)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
@@ -258,3 +254,5 @@ theme_override_fonts/font = ExtResource("6_6ka2g")
 theme_override_font_sizes/font_size = 40
 text = "00:00:00"
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
