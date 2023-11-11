@@ -1,7 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://b2ewkkicwllln"]
+[gd_scene load_steps=29 format=3 uid="uid://b2ewkkicwllln"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_cm5ew"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_020cm"]
+[ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_r8seo"]
+[ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="3_j8lxc"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="8_7vvfn"]
 [ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="8_c3e2h"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="9_bgc67"]
@@ -25,6 +27,20 @@
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="23_es5qd"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="24_g5va3"]
 
+[sub_resource type="Environment" id="Environment_yopeo"]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_strength = 0.87
+glow_bloom = 0.56
+glow_hdr_threshold = 0.87
+glow_hdr_scale = 1.27
+adjustment_enabled = true
+adjustment_brightness = 1.05
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_66g35"]
 
 [node name="Base_level" node_paths=PackedStringArray("ghost_background", "default_background") instance=ExtResource("1_cm5ew")]
@@ -32,7 +48,84 @@ expectedTime = 14.0
 ghost_background = NodePath("Ghost")
 default_background = NodePath("Default")
 
-[node name="Player" parent="." index="0"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_yopeo")
+
+[node name="Red Root" parent="WorldEnvironment" index="0" instance=ExtResource("2_r8seo")]
+position = Vector2(-326, 759)
+rotation = -0.675198
+
+[node name="Red Root2" parent="WorldEnvironment" index="1" instance=ExtResource("2_r8seo")]
+position = Vector2(1843, 1190)
+
+[node name="Red Root3" parent="WorldEnvironment" index="2" instance=ExtResource("2_r8seo")]
+position = Vector2(3029, -93)
+rotation = 1.72297
+scale = Vector2(1.18722, 1.18722)
+
+[node name="Red Root5" parent="WorldEnvironment" index="3" instance=ExtResource("2_r8seo")]
+position = Vector2(2608, -127)
+rotation = 2.03545
+scale = Vector2(0.747765, 0.747765)
+
+[node name="Red Root4" parent="WorldEnvironment" index="4" instance=ExtResource("2_r8seo")]
+position = Vector2(3848, 51)
+rotation = -1.29586
+scale = Vector2(0.765473, 0.765473)
+
+[node name="Flares" parent="WorldEnvironment" index="5" instance=ExtResource("3_j8lxc")]
+position = Vector2(-326, 192)
+rotation = 1.44155
+
+[node name="Flares2" parent="WorldEnvironment" index="6" instance=ExtResource("3_j8lxc")]
+position = Vector2(-389, 556)
+rotation = 1.44155
+
+[node name="Flares3" parent="WorldEnvironment" index="7" instance=ExtResource("3_j8lxc")]
+position = Vector2(464, 508)
+rotation = 1.44155
+
+[node name="Flares4" parent="WorldEnvironment" index="8" instance=ExtResource("3_j8lxc")]
+position = Vector2(779, 65)
+rotation = 1.69514
+
+[node name="Flares5" parent="WorldEnvironment" index="9" instance=ExtResource("3_j8lxc")]
+position = Vector2(1514, 366)
+rotation = 1.91111
+
+[node name="Flares9" parent="WorldEnvironment" index="10" instance=ExtResource("3_j8lxc")]
+position = Vector2(1150, 346)
+rotation = 1.91111
+
+[node name="Flares10" parent="WorldEnvironment" index="11" instance=ExtResource("3_j8lxc")]
+position = Vector2(220, 79)
+rotation = 1.70165
+
+[node name="Flares11" parent="WorldEnvironment" index="12" instance=ExtResource("3_j8lxc")]
+position = Vector2(3004, 69)
+rotation = 4.26475
+
+[node name="Flares6" parent="WorldEnvironment" index="13" instance=ExtResource("3_j8lxc")]
+position = Vector2(3154, 902)
+rotation = 1.25287
+
+[node name="Flares7" parent="WorldEnvironment" index="14" instance=ExtResource("3_j8lxc")]
+position = Vector2(2170, 1060)
+rotation = 1.35102
+
+[node name="Flares8" parent="WorldEnvironment" index="15" instance=ExtResource("3_j8lxc")]
+position = Vector2(1889, 965)
+rotation = 1.35102
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-209, 900, 137, 848, 446, 844, 606, 855, 1241, 787, 1500, 768, 1578, 875, 1565, 1380, -879, 1415, -951, -739, 2627, -1556, 2626, -253, -205, -172, -435, -130, -544, 30, -599, 630, -560, 818, -464, 898)
+
+[node name="Polygon2D2" type="Polygon2D" parent="." index="2"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(2393, 1973, 1106, 1988, 882, 1304, 1247, 1137, 1663, 1454, 2445, 1258, 2659, 1540, 3147, 1629, 3848, 1629, 4211, 1403, 4369, 1179, 4384, 371, 4328, 121, 4114, -105, 3788, -218, 3130, -210, 2538, -250, 2390, -1294, 5068, -1071, 5099, 1963)
+
+[node name="Player" parent="." index="3"]
 position = Vector2(-240, 309)
 scale = Vector2(0.429665, 0.429665)
 
@@ -150,128 +243,128 @@ text = "00:14
 [node name="ColorRect" parent="TransitionCanvas" index="0"]
 metadata/_edit_lock_ = true
 
-[node name="SpikeVar5" parent="." index="8" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar5" parent="." index="11" instance=ExtResource("12_63ekh")]
 position = Vector2(1462, 732)
 scale = Vector2(0.633344, 0.633344)
 isCrossDim = true
 
-[node name="SpikeVar6" parent="." index="9" instance=ExtResource("13_55yij")]
+[node name="SpikeVar6" parent="." index="12" instance=ExtResource("13_55yij")]
 position = Vector2(1335, 754)
 scale = Vector2(0.642935, 0.642935)
 isCrossDim = true
 
-[node name="SpikeVar4" parent="." index="10" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar4" parent="." index="13" instance=ExtResource("12_63ekh")]
 position = Vector2(3357, 372)
 rotation = -0.837237
 scale = Vector2(0.710718, 0.710718)
 isCrossDim = true
 
-[node name="SpikeVar1" parent="." index="11" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar1" parent="." index="14" instance=ExtResource("15_gqfsf")]
 position = Vector2(3449, 253)
 rotation = -0.417186
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="SpikeVar7" parent="." index="12" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar7" parent="." index="15" instance=ExtResource("12_63ekh")]
 position = Vector2(1054, 791)
 rotation = -0.473766
 scale = Vector2(0.710718, 0.710718)
 isCrossDim = true
 
-[node name="SpikeVar8" parent="." index="13" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar8" parent="." index="16" instance=ExtResource("15_gqfsf")]
 position = Vector2(1200, 749)
 rotation = -0.0537148
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="SpikeVar9" parent="." index="14" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar9" parent="." index="17" instance=ExtResource("12_63ekh")]
 position = Vector2(880, 804)
 scale = Vector2(0.633344, 0.633344)
 isCrossDim = true
 
-[node name="SpikeVar10" parent="." index="15" instance=ExtResource("13_55yij")]
+[node name="SpikeVar10" parent="." index="18" instance=ExtResource("13_55yij")]
 position = Vector2(753, 826)
 scale = Vector2(0.642935, 0.642935)
 isCrossDim = true
 
-[node name="SpikeVar23" parent="." index="16" instance=ExtResource("13_55yij")]
+[node name="SpikeVar23" parent="." index="19" instance=ExtResource("13_55yij")]
 position = Vector2(2568, 392)
 scale = Vector2(0.500052, 0.500052)
 isCrossDim = true
 
-[node name="SpikeVar11" parent="." index="17" instance=ExtResource("12_63ekh")]
-position = Vector2(472, 863)
+[node name="SpikeVar11" parent="." index="20" instance=ExtResource("12_63ekh")]
+position = Vector2(292, 816)
 rotation = -0.473766
 scale = Vector2(0.710718, 0.710718)
 isCrossDim = true
 
-[node name="SpikeVar12" parent="." index="18" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar12" parent="." index="21" instance=ExtResource("15_gqfsf")]
 position = Vector2(618.001, 821)
 rotation = -0.0537148
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="SpikeVar13" parent="." index="19" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar13" parent="." index="22" instance=ExtResource("12_63ekh")]
 position = Vector2(486, 793)
 rotation = 0.416737
 scale = Vector2(0.633344, 0.633344)
 isCrossDim = true
 
-[node name="SpikeVar14" parent="." index="20" instance=ExtResource("13_55yij")]
+[node name="SpikeVar14" parent="." index="23" instance=ExtResource("13_55yij")]
 position = Vector2(359, 815)
 rotation = 0.416737
 scale = Vector2(0.642935, 0.642935)
 isCrossDim = true
 
-[node name="SpikeVar15" parent="." index="21" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar15" parent="." index="24" instance=ExtResource("12_63ekh")]
 position = Vector2(77.9999, 852)
 rotation = -0.0570289
 scale = Vector2(0.710718, 0.710718)
 isCrossDim = true
 
-[node name="SpikeVar16" parent="." index="22" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar16" parent="." index="25" instance=ExtResource("15_gqfsf")]
 position = Vector2(224.001, 810)
 rotation = 0.363022
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="SpikeVar17" parent="." index="23" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar17" parent="." index="26" instance=ExtResource("12_63ekh")]
 position = Vector2(3223, 556)
 rotation = 0.416737
 scale = Vector2(0.633344, 0.633344)
 isCrossDim = true
 
-[node name="SpikeVar18" parent="." index="24" instance=ExtResource("13_55yij")]
+[node name="SpikeVar18" parent="." index="27" instance=ExtResource("13_55yij")]
 position = Vector2(3096, 528)
 rotation = 0.416737
 scale = Vector2(0.642935, 0.642935)
 isCrossDim = true
 
-[node name="SpikeVar19" parent="." index="25" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar19" parent="." index="28" instance=ExtResource("12_63ekh")]
 position = Vector2(2815, 615)
 rotation = -0.0570289
 scale = Vector2(0.710718, 0.710718)
 isCrossDim = true
 
-[node name="SpikeVar21" parent="." index="26" instance=ExtResource("12_63ekh")]
+[node name="SpikeVar21" parent="." index="29" instance=ExtResource("12_63ekh")]
 position = Vector2(2464, 320)
 rotation = -0.00590926
 scale = Vector2(0.395727, 0.395727)
 isCrossDim = true
 
-[node name="SpikeVar20" parent="." index="27" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar20" parent="." index="30" instance=ExtResource("15_gqfsf")]
 position = Vector2(2961, 512)
 rotation = 0.363022
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="SpikeVar22" parent="." index="28" instance=ExtResource("15_gqfsf")]
+[node name="SpikeVar22" parent="." index="31" instance=ExtResource("15_gqfsf")]
 position = Vector2(2649, 507)
 rotation = 0.530627
 scale = Vector2(0.615855, 0.615855)
 isCrossDim = true
 
-[node name="Ghost" type="ParallaxBackground" parent="." index="29"]
+[node name="Ghost" type="ParallaxBackground" parent="." index="32"]
 visible = false
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
@@ -334,7 +427,7 @@ texture = ExtResource("17_78bv6")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Default" type="ParallaxBackground" parent="." index="30"]
+[node name="Default" type="ParallaxBackground" parent="." index="33"]
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
 transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
