@@ -178,7 +178,6 @@ sources/0 = SubResource("TileSetAtlasSource_fntw0")
 [node name="Player" parent="." instance=ExtResource("2_lgrao")]
 position = Vector2(591, 424)
 scale = Vector2(0.5, 0.5)
-collision_mask = 5
 jump_force = -550.0
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]

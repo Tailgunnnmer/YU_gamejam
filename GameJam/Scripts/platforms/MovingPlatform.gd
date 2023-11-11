@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var turnBackTime : float
 var timer : float
 var constY 
+var isInOrbital : bool = false
 
 func _ready():
 	timer = turnBackTime
@@ -15,7 +16,8 @@ func _physics_process(delta):
 	if isMoving:
 		velocity = move_speed
 	else:
-		global_position.y = constY
+		if !isInOrbital:
+			global_position.y = constY
 
 	timer -= delta
 	if timer <0:

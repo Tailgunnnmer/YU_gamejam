@@ -28,6 +28,6 @@ func find_platforms()->void:
 	platforms = []
 	for child in get_children():
 		if child.is_in_group("platform"):
-			child.isMoving = true
+			child.isInOrbital = true
 			platforms.append(child)
 			

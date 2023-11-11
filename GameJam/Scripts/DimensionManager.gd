@@ -23,8 +23,7 @@ func _process(delta):
 				ResetDimension(ghost_dimension)
 				player.set_collision_mask_value(2,true)
 				player.set_collision_mask_value(3,false)
-				player.set_collision_layer_value(2,true)
-				player.set_collision_layer_value(3,false)
+				
 				player.SetRayCastCollisionsGhost()
 				
 
@@ -34,8 +33,7 @@ func _process(delta):
 				ResetDimension(default_dimension)
 				player.set_collision_mask_value(2,false)
 				player.set_collision_mask_value(3,true)
-				player.set_collision_layer_value(2,false)
-				player.set_collision_layer_value(3,true)
+		
 				player.SetRayCastCollisionsDefault()
 
 		print(current_player_dimension)
@@ -49,3 +47,13 @@ func ResetDimension(dimension : Node2D)->void:
 	var dimension_objects : Array = dimension.get_children()
 	for obj in dimension_objects:
 		obj.modulate.a = 1
+
+func IsPlayerInGhostDimension()->bool:
+	match current_player_dimension:
+			dimensions.DEFAULT:
+				return false
+				
+			dimensions.GHOST:
+				return true
+	return false
+				
