@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2x022cnty00v"]
+
+[ext_resource type="AudioStream" uid="uid://benx5gmq3owfp" path="res://Audio/main.ogg" id="1_sxfki"]
+
+[node name="GameMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_sxfki")
+volume_db = -5.0

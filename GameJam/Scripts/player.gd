@@ -29,6 +29,9 @@ func _physics_process(delta):
 
 	movement()
 	move_and_slide()
+
+	if global_position.y > 1600:
+		RestartLevel()
 	
 
 func apply_gravity(delta : float)->void:

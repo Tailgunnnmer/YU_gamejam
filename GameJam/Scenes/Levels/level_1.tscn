@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=31 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dvbpcqhloue4l" path="res://Scenes/Platforms/orbital_black.tscn" id="3_l4k8i"]
 [ext_resource type="Texture2D" uid="uid://o1dj8c3gf4ho" path="res://Assets/Background_1.2_Blur/B_Blur/B_6_1.png" id="3_v3es0"]
 [ext_resource type="Texture2D" uid="uid://dqe0hx3x6yayd" path="res://Assets/Background_1.2_Blur/B_Blur/B_4_1.png" id="4_baw1f"]
-[ext_resource type="PackedScene" uid="uid://bgcdq2k2tkch1" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
+[ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="4_w7gwi"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="4_x1dcp"]
 [ext_resource type="PackedScene" uid="uid://bye13ihk2dwmm" path="res://Scenes/Platforms/baloon_platform.tscn" id="5_lo63w"]
 [ext_resource type="Texture2D" uid="uid://dwwaaqsggdsrq" path="res://Assets/Background_1.2_Blur/B_Blur/B_3_1.png" id="5_ywq87"]
 [ext_resource type="Texture2D" uid="uid://djk5t8qmm3dwi" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_1.png" id="6_e3vy3"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="Texture2D" uid="uid://cak6bmua8cw6" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_2.png" id="7_b71ws"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="Texture2D" uid="uid://b0tlh30xcot4c" path="res://Assets/Background_1.2_Blur/B_Blur/B_1_3.png" id="8_ybkpd"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="13_uq71u"]
 [ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="14_5f4iw"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="15_u81xt"]
+[ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="27_om75n"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
 
@@ -46,7 +47,10 @@ adjustment_saturation = 1.2
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_agxpq"]
 
-[node name="Level1" instance=ExtResource("1_2sygc")]
+[node name="Level1" node_paths=PackedStringArray("ghost_background", "default_background") instance=ExtResource("1_2sygc")]
+expectedTime = 13.0
+ghost_background = NodePath("Ghost")
+default_background = NodePath("Default")
 
 [node name="Ghost" type="ParallaxBackground" parent="." index="0"]
 visible = false
@@ -310,6 +314,9 @@ scale = Vector2(3.53903, 0.667526)
 collision_layer = 1
 collision_mask = 1
 
+[node name="Sprite2D" parent="CrossDimension/MovingPlatform" index="0"]
+texture = ExtResource("27_om75n")
+
 [node name="SpikeVar2" parent="CrossDimension" index="2" instance=ExtResource("6_k5tu8")]
 position = Vector2(114, 25)
 rotation = 2.71873
@@ -404,10 +411,17 @@ offset_right = -36.0
 offset_bottom = 107.0
 
 [node name="Goal Time" parent="TimerUI" index="1"]
-text = "00:14"
+text = "00:13
+
+"
+
+[node name="TextureRect" parent="TimerUI/Goal Time" index="0"]
+visible = false
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="12"]
 visible = false
 position = Vector2(182, -302)
 rotation = -0.496984
 shadow_enabled = true
+
+[editable path="CrossDimension/MovingPlatform"]

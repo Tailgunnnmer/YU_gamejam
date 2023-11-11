@@ -80,6 +80,7 @@ texture = ExtResource("1_xydbu")
 texture = ExtResource("2_5w0g4")
 
 [node name="Face" type="Sprite2D" parent="."]
+modulate = Color(1, 0.211765, 0.223529, 1)
 texture = ExtResource("3_7o1j7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
