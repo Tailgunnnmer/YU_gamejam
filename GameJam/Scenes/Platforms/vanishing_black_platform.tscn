@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://sh0b8jqqflye" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Cloud.png" id="2_due54"]
 
 [node name="VanishingBlackPlatform" instance=ExtResource("1_in32t")]
+collision_layer = 4
+collision_mask = 4
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_due54")

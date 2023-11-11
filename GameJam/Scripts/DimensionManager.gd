@@ -36,7 +36,7 @@ func _process(delta):
 		
 				player.SetRayCastCollisionsDefault()
 
-		print(current_player_dimension)
+		LevelData.isInGhost = IsPlayerInGhostDimension()
 
 func VanishDimension(dimension : Node2D)->void:
 	var dimension_objects : Array = dimension.get_children()

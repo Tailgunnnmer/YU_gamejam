@@ -10,6 +10,8 @@ size = Vector2(297, 53)
 size = Vector2(297, 113)
 
 [node name="VanishingPlatform" type="CharacterBody2D" groups=["platform"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ih652")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

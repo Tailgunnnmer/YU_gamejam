@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var dimensionManager : Node2D
+
 @export var isInGhost : bool
 @export var isCrossDim : bool
 @export var move_speed : Vector2
@@ -11,7 +11,7 @@ var timer : float = -1
 func _on_body_entered(body:Node2D):
 	
 	if body.is_in_group("player"):
-		if (dimensionManager.IsPlayerInGhostDimension() == isInGhost) || isCrossDim:
+		if (LevelData.isInGhost == isInGhost) || isCrossDim:
 			body.RestartLevel()
 
 func _physics_process(delta):

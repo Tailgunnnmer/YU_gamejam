@@ -8,4 +8,7 @@ var level_time_dict : Dictionary = {
 	"Level5":-1
 }
 
+var isInGhost : bool
 
+func _ready():
+	isInGhost = false
