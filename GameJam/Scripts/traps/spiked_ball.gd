@@ -15,4 +15,6 @@ func _physics_process(delta):
 		move_speed *= -1
 		timer = call_back_time
 
+	timer -=delta
+
 	position += move_speed

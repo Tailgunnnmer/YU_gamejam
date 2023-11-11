@@ -197,13 +197,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(310.574, -391.847)
+position = Vector2(353.553, 353.553)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(184.062, 464.888)
+position = Vector2(-482.963, 129.41)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-494.636, -73.0415)
+position = Vector2(129.41, -482.963)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
