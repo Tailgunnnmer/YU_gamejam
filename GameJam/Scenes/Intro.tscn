@@ -565,7 +565,6 @@ theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
 [node name="IntroCanvas" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="IntroCanvas"]
 anchors_preset = 15
@@ -599,7 +598,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -694.0
 offset_top = -240.5
-offset_right = 53.9993
+offset_right = 54.0
 offset_bottom = -119.5
 grow_horizontal = 2
 grow_vertical = 2
