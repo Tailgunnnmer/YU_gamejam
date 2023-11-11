@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsn6hvdlxi772"]
+[gd_scene load_steps=5 format=3 uid="uid://dsn6hvdlxi772"]
 
+[ext_resource type="Script" path="res://Scripts/traps/candle.gd" id="1_0ljol"]
 [ext_resource type="Texture2D" uid="uid://bmcbn4hth623e" path="res://Assets/Platform/Enemy/Candle.png" id="1_yl8rs"]
 [ext_resource type="Texture2D" uid="uid://binmfvx4dgsad" path="res://Assets/Platform/Enemy/Candle_Fire.png" id="2_klqfk"]
+[ext_resource type="PackedScene" uid="uid://b76kevewb7t3a" path="res://Scenes/Trap/projectile.tscn" id="2_q17rj"]
 
 [node name="Candle" type="Node2D"]
+script = ExtResource("1_0ljol")
+projectile = ExtResource("2_q17rj")
+direction = Vector2(-1, 0)
+projectile_speed = 10.0
 
 [node name="Candle" type="Sprite2D" parent="."]
 texture = ExtResource("1_yl8rs")
@@ -11,3 +17,8 @@ texture = ExtResource("1_yl8rs")
 [node name="Fire" type="Sprite2D" parent="."]
 position = Vector2(-26, -89)
 texture = ExtResource("2_klqfk")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

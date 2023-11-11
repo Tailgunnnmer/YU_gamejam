@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://drjckemnq7moh"]
+
+[ext_resource type="PackedScene" uid="uid://dsn6hvdlxi772" path="res://Scenes/Trap/candle.tscn" id="1_1j4p4"]
+[ext_resource type="PackedScene" uid="uid://jksao1sf20pw" path="res://Scenes/Trap/projectile_black.tscn" id="2_gpla4"]
+[ext_resource type="Texture2D" uid="uid://dvy4n52h3hwxa" path="res://Assets/Platform/Black_White/BlackWhite/Enemy/Candle.png" id="2_j02sc"]
+
+[node name="CandleBlack" instance=ExtResource("1_1j4p4")]
+projectile = ExtResource("2_gpla4")
+
+[node name="Candle" parent="." index="0"]
+texture = ExtResource("2_j02sc")

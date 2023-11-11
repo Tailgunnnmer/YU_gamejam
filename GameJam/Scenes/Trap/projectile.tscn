@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b76kevewb7t3a"]
+
+[ext_resource type="Script" path="res://Scripts/traps/Projectile.gd" id="1_0wafo"]
+[ext_resource type="PackedScene" uid="uid://c12mgplnirrbs" path="res://Particles/fire.tscn" id="2_3qj24"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6154"]
+radius = 45.0111
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_0wafo")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_3qj24")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y6154")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

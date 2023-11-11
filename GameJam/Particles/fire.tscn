@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c12mgplnirrbs"]
+[gd_scene load_steps=7 format=3 uid="uid://c12mgplnirrbs"]
 
 [ext_resource type="Texture2D" uid="uid://cprysxh4e37cf" path="res://Assets/Kenney Particles/PNG (Black background)/fire_02.png" id="1_hnnl2"]
 [ext_resource type="Texture2D" uid="uid://1u6pc8iv8vei" path="res://Assets/Kenney Particles/PNG (Transparent)/light_01.png" id="2_l0x8i"]
@@ -31,9 +31,6 @@ scale_max = 0.2
 color = Color(1, 1, 1, 0.721569)
 color_ramp = SubResource("GradientTexture1D_uasg5")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_trvyc"]
-radius = 38.0
-
 [node name="GPUParticles2D" type="GPUParticles2D"]
 material = SubResource("CanvasItemMaterial_ixtww")
 amount = 50
@@ -43,11 +40,6 @@ lifetime = 0.3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.576471, 0.772549, 0.921569, 1)
+show_behind_parent = true
 scale = Vector2(-0.23, -0.248704)
 texture = ExtResource("2_l0x8i")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
-shape = SubResource("CircleShape2D_trvyc")
