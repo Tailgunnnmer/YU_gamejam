@@ -1,12 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://k2e21lqxnblf"]
+[gd_scene load_steps=8 format=3 uid="uid://bgrjvdl72tkd7"]
 
-[ext_resource type="Texture2D" uid="uid://bxtidhthap4xr" path="res://Assets/Kenney Particles/PNG (Black background)/muzzle_05.png" id="1_xwoxi"]
-[ext_resource type="Texture2D" uid="uid://dpp2ryhxekjky" path="res://Assets/Kenney Particles/PNG (Black background)/smoke_08.png" id="2_d4nnd"]
-
-[sub_resource type="Environment" id="Environment_g4kn0"]
-background_mode = 3
-tonemap_mode = 3
-glow_enabled = true
+[ext_resource type="Texture2D" uid="uid://bxtidhthap4xr" path="res://Assets/Kenney Particles/PNG (Black background)/muzzle_05.png" id="1_voaq1"]
+[ext_resource type="Texture2D" uid="uid://dpp2ryhxekjky" path="res://Assets/Kenney Particles/PNG (Black background)/smoke_08.png" id="2_7o6ce"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2s4js"]
 blend_mode = 1
@@ -53,29 +48,24 @@ color_ramp = SubResource("GradientTexture1D_v4pw6")
 hue_variation_min = -0.39
 hue_variation_max = 0.1
 
-[node name="Particle Testing Scene" type="Node2D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_g4kn0")
-
-[node name="BounceParticle" type="GPUParticles2D" parent="."]
+[node name="BounceParticle" type="GPUParticles2D"]
 material = SubResource("CanvasItemMaterial_2s4js")
 emitting = false
 amount = 3
 sub_emitter = NodePath("BounceParticle2")
 process_material = SubResource("ParticleProcessMaterial_0tayw")
-texture = ExtResource("1_xwoxi")
+texture = ExtResource("1_voaq1")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 
-[node name="BounceParticle2" type="GPUParticles2D" parent="BounceParticle"]
+[node name="BounceParticle2" type="GPUParticles2D" parent="."]
 show_behind_parent = true
 material = SubResource("CanvasItemMaterial_2s4js")
 emitting = false
 amount = 5
 process_material = SubResource("ParticleProcessMaterial_ipxvt")
-texture = ExtResource("2_d4nnd")
+texture = ExtResource("2_7o6ce")
 lifetime = 3.0
 one_shot = true
 explosiveness = 0.9
