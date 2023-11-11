@@ -1,10 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://cs7el0pq4dasg"]
+[gd_scene load_steps=31 format=3 uid="uid://cs7el0pq4dasg"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_xfib7"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
+[ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="2_tqt0o"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="6_7mblg"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_4vyvc"]
-[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="10_tmdyt"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
@@ -51,6 +52,101 @@ default_background = NodePath("Default")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
 environment = SubResource("Environment_bh3ks")
+
+[node name="Flares" parent="WorldEnvironment" index="0" instance=ExtResource("2_tqt0o")]
+position = Vector2(-128, 223)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares19" parent="WorldEnvironment" index="1" instance=ExtResource("2_tqt0o")]
+position = Vector2(235, 388)
+rotation = 1.40957
+amount = 20
+
+[node name="Flares2" parent="WorldEnvironment" index="2" instance=ExtResource("2_tqt0o")]
+position = Vector2(838, 218)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares3" parent="WorldEnvironment" index="3" instance=ExtResource("2_tqt0o")]
+position = Vector2(1420, 213)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares4" parent="WorldEnvironment" index="4" instance=ExtResource("2_tqt0o")]
+position = Vector2(2049, 195)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares5" parent="WorldEnvironment" index="5" instance=ExtResource("2_tqt0o")]
+position = Vector2(2672, 59)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares17" parent="WorldEnvironment" index="6" instance=ExtResource("2_tqt0o")]
+position = Vector2(2570, 255)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares18" parent="WorldEnvironment" index="7" instance=ExtResource("2_tqt0o")]
+position = Vector2(1892, 82)
+rotation = 1.01568
+amount = 20
+
+[node name="Flares6" parent="WorldEnvironment" index="8" instance=ExtResource("2_tqt0o")]
+position = Vector2(3601, 183)
+rotation = 1.60615
+amount = 20
+
+[node name="Flares7" parent="WorldEnvironment" index="9" instance=ExtResource("2_tqt0o")]
+position = Vector2(4280, 420)
+rotation = 2.13301
+amount = 20
+
+[node name="Flares16" parent="WorldEnvironment" index="10" instance=ExtResource("2_tqt0o")]
+position = Vector2(4397, 128)
+rotation = 2.30637
+amount = 20
+
+[node name="Flares8" parent="WorldEnvironment" index="11" instance=ExtResource("2_tqt0o")]
+position = Vector2(4246, 952)
+rotation = 3.59478
+amount = 20
+
+[node name="Flares9" parent="WorldEnvironment" index="12" instance=ExtResource("2_tqt0o")]
+position = Vector2(3984, 1267)
+rotation = 4.64673
+amount = 20
+
+[node name="Flares14" parent="WorldEnvironment" index="13" instance=ExtResource("2_tqt0o")]
+position = Vector2(3458, 989)
+rotation = 4.64673
+amount = 20
+
+[node name="Flares15" parent="WorldEnvironment" index="14" instance=ExtResource("2_tqt0o")]
+position = Vector2(3696, 1142)
+rotation = 4.79726
+amount = 20
+
+[node name="Flares10" parent="WorldEnvironment" index="15" instance=ExtResource("2_tqt0o")]
+position = Vector2(5434, 1181)
+rotation = 4.84984
+amount = 20
+
+[node name="Flares11" parent="WorldEnvironment" index="16" instance=ExtResource("2_tqt0o")]
+position = Vector2(5252, 1338)
+rotation = 4.90946
+amount = 20
+
+[node name="Flares12" parent="WorldEnvironment" index="17" instance=ExtResource("2_tqt0o")]
+position = Vector2(5479, 618)
+rotation = 4.1699
+amount = 20
+
+[node name="Flares13" parent="WorldEnvironment" index="18" instance=ExtResource("2_tqt0o")]
+position = Vector2(5271, 317)
+rotation = 4.14305
+amount = 20
 
 [node name="Polygon2D" type="Polygon2D" parent="." index="1"]
 color = Color(0, 0, 0, 1)
