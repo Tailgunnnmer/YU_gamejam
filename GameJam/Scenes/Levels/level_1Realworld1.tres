@@ -1,0 +1,24 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://drhp61211qg0w"]
+
+[sub_resource type="Gradient" id="Gradient_40wvk"]
+offsets = PackedFloat32Array(0, 0.0806122, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.253133, 0.0491087, 0.0849172, 1, 0.866576, 0.90235, 0.960043, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jv4w4"]
+gradient = SubResource("Gradient_40wvk")
+
+[resource]
+background_mode = 3
+tonemap_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 2.75
+glow_strength = 0.53
+glow_bloom = 0.27
+glow_blend_mode = 0
+glow_hdr_threshold = 1.73
+glow_hdr_scale = 1.28
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.2
+adjustment_color_correction = SubResource("GradientTexture1D_jv4w4")
