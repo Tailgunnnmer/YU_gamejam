@@ -9,25 +9,25 @@ extends CharacterBody2D
 var isVanishing : bool = false
 
 func _on_area_2d_body_entered(body:Node2D):
-    
-    if body.is_in_group("player") && !isVanishing:
-        vanish()
-        
+	
+	if body.is_in_group("player") && !isVanishing:
+		vanish()
+		
 
 func vanish()->void:
-    isVanishing = true
-    var tween = get_tree().create_tween()
-    tween.tween_property(sprite,"self_modulate",Color("ffc56e00"),vanish_time)
-    await tween.finished
-    collision.set_deferred("disabled",true)
-    tween.kill()
-    reCreate()
+	isVanishing = true
+	var tween = get_tree().create_tween()
+	tween.tween_property(sprite,"self_modulate",Color("ffc56e00"),vanish_time)
+	await tween.finished
+	collision.set_deferred("disabled",true)
+	tween.kill()
+	reCreate()
 
 func reCreate()->void:
-    await get_tree().create_timer(recreate_time).timeout
-    var tween = get_tree().create_tween()
-    tween.tween_property(sprite,"self_modulate",Color("ffffff"),.4)
-    collision.set_deferred("disabled",false)
-    await tween.finished
-    tween.kill()
-    isVanishing = false
+	await get_tree().create_timer(recreate_time).timeout
+	var tween = get_tree().create_tween()
+	tween.tween_property(sprite,"self_modulate",Color("ffffff"),.4)
+	collision.set_deferred("disabled",false)
+	await tween.finished
+	tween.kill()
+	isVanishing = false

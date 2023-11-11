@@ -33,7 +33,6 @@ texture = ExtResource("3_nrqvt")
 [node name="Spike4" type="Sprite2D" parent="Spikes"]
 position = Vector2(121, -70)
 rotation = 0.626287
-scale = Vector2(1, 1)
 texture = ExtResource("4_irpk0")
 
 [node name="Rock" type="Sprite2D" parent="."]
