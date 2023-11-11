@@ -10,6 +10,7 @@ var current_player_dimension : dimensions = dimensions.DEFAULT
 
 func _ready():
 	VanishDimension(ghost_dimension)
+	ResetDimension(default_dimension)
 
 
 func _process(delta):

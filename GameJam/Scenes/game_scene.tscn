@@ -178,6 +178,7 @@ sources/0 = SubResource("TileSetAtlasSource_fntw0")
 [node name="Player" parent="." instance=ExtResource("2_lgrao")]
 position = Vector2(591, 424)
 scale = Vector2(0.5, 0.5)
+collision_mask = 5
 jump_force = -550.0
 
 [node name="DimensionManager" type="Node2D" parent="." node_paths=PackedStringArray("ghost_dimension", "default_dimension", "crossover_dimension", "player")]
@@ -196,13 +197,13 @@ radius = Vector2(500, 500)
 rotation_duration = -10.0
 
 [node name="MovingPlatform" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-174.286, 468.641)
+position = Vector2(375.056, -330.656)
 
 [node name="MovingPlatform2" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(-318.712, -385.257)
+position = Vector2(98.8287, 490.136)
 
 [node name="MovingPlatform3" parent="GhostDimension/Orbital" instance=ExtResource("4_6uotw")]
-position = Vector2(492.998, -83.3844)
+position = Vector2(-473.884, -159.48)
 
 [node name="DefaultDimension" type="Node2D" parent="."]
 
