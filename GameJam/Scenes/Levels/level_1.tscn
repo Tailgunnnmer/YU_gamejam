@@ -217,7 +217,7 @@ scale = Vector2(0.315484, 0.315484)
 [node name="Red Root2" parent="." index="6" instance=ExtResource("2_xbeht")]
 modulate = Color(100, 1, 1, 1)
 material = SubResource("CanvasItemMaterial_agxpq")
-position = Vector2(2291, 194)
+position = Vector2(2290, 194)
 rotation = 3.14159
 scale = Vector2(1.02932, 1.02932)
 
