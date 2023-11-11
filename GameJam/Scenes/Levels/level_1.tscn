@@ -424,9 +424,6 @@ text = "00:13
 
 "
 
-[node name="TextureRect" parent="TimerUI/Goal Time" index="0"]
-visible = false
-
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="14"]
 visible = false
 position = Vector2(182, -302)

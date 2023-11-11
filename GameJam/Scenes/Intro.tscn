@@ -574,7 +574,6 @@ z_index = 10
 position = Vector2(1347, 958)
 
 [node name="IntroCanvas" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="IntroCanvas"]
 anchors_preset = 15
