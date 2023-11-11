@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cedjis8mig21p"]
+[gd_scene load_steps=12 format=3 uid="uid://cedjis8mig21p"]
 
 [ext_resource type="Texture2D" uid="uid://cuediwt5vc3nq" path="res://Assets/Platform/Glow/B_Red_Middle.png" id="1_f0vvd"]
 [ext_resource type="Texture2D" uid="uid://blqithmjaaf0t" path="res://Assets/Platform/Glow/B_Red_L2.png" id="2_b8gh4"]
+[ext_resource type="Texture2D" uid="uid://dbbtakwdfcx8g" path="res://Assets/Effects/Effects/Glow/glow_4.png" id="3_0lrcd"]
 [ext_resource type="Texture2D" uid="uid://bjhbn4x74nokv" path="res://Assets/Platform/Glow/B_Red_L1.png" id="3_nwnvu"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_omfcv"]
+light_mode = 1
 
 [sub_resource type="Animation" id="Animation_jc538"]
 resource_name = "RESET"
@@ -64,12 +68,32 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4d52o"]
 
+[sub_resource type="Gradient" id="Gradient_mg7gp"]
+offsets = PackedFloat32Array(0, 0.113265, 0.839796, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8pl6y"]
+gradient = SubResource("Gradient_mg7gp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s1215"]
+particle_flag_disable_z = true
+gravity = Vector3(0, -1, 0)
+initial_velocity_min = 94.59
+initial_velocity_max = 94.59
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.1
+scale_max = 0.1
+color = Color(1, 1, 1, 0.537255)
+color_ramp = SubResource("GradientTexture1D_8pl6y")
+turbulence_enabled = true
+turbulence_noise_strength = 18.35
+
 [node name="Red Root" type="Node2D"]
 
 [node name="Node2D2" type="Node2D" parent="."]
-modulate = Color(28.17, 0.37, 0.36, 1)
-position = Vector2(11.7687, 11.4532)
-rotation = 5.87762
+modulate = Color(100, 0.37, 0.36, 1)
+material = SubResource("CanvasItemMaterial_omfcv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
 autoplay = "RESET"
@@ -79,18 +103,30 @@ libraries = {
 
 [node name="BRedMiddle" type="Sprite2D" parent="Node2D2"]
 material = SubResource("CanvasItemMaterial_4d52o")
-rotation = -3.03201
 texture = ExtResource("1_f0vvd")
 
 [node name="Node2D" type="Node2D" parent="Node2D2"]
-rotation = 3.03201
 
 [node name="BRedL2" type="Sprite2D" parent="Node2D2/Node2D"]
 use_parent_material = true
 position = Vector2(56, 42)
 texture = ExtResource("2_b8gh4")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Node2D2/Node2D/BRedL2"]
+rotation = -0.637045
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_s1215")
+texture = ExtResource("3_0lrcd")
+lifetime = 2.0
+
 [node name="BRedL1" type="Sprite2D" parent="Node2D2/Node2D"]
 use_parent_material = true
 position = Vector2(-58, -47)
 texture = ExtResource("3_nwnvu")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Node2D2/Node2D/BRedL1"]
+rotation = -2.92168
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_s1215")
+texture = ExtResource("3_0lrcd")
+lifetime = 2.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bye13ihk2dwmm"]
+[gd_scene load_steps=11 format=3 uid="uid://bye13ihk2dwmm"]
 
 [ext_resource type="Script" path="res://Scripts/platforms/BaloonPlatform.gd" id="1_t5rhn"]
 [ext_resource type="Texture2D" uid="uid://ctfdt3ghhly25" path="res://Assets/Platform/Platform/Baloon.png" id="2_ejco8"]
@@ -96,6 +96,9 @@ _data = {
 "bounce": SubResource("Animation_5qaer")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lsmqr"]
+polygon = PackedVector2Array(-78, -53, -47, -83, 26, -90, 72, -56, 90, -7, 78, 38, 58, 44, 71, 67, 62, 84, -52, 83, -69, 69, -52, 49, -66, 39, -87, 4)
+
 [node name="BaloonPlatform" type="StaticBody2D"]
 script = ExtResource("1_t5rhn")
 
@@ -127,3 +130,7 @@ position = Vector2(4, 70)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_se8an")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+occluder = SubResource("OccluderPolygon2D_lsmqr")

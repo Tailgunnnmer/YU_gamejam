@@ -25,17 +25,15 @@ initial_velocity_min = 150.0
 initial_velocity_max = 500.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
+scale_min = 0.03
+scale_max = 0.1
 color = Color(1, 1, 1, 0.8)
 color_ramp = SubResource("GradientTexture1D_16ig0")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fbsrh"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l235k"]
+blend_mode = 1
 
-[node name="GPUParticles2D" type="GPUParticles2D"]
-visible = false
+[node name="Flares" type="GPUParticles2D"]
 material = SubResource("CanvasItemMaterial_ii8m5")
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_tbpd0")
@@ -43,6 +41,7 @@ texture = ExtResource("1_s6473")
 lifetime = 2.0
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-visible = false
-process_material = SubResource("ParticleProcessMaterial_fbsrh")
+material = SubResource("CanvasItemMaterial_l235k")
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_tbpd0")
 texture = ExtResource("2_pv40y")
