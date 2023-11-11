@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://crtwbcg7tofbj"]
+
+[ext_resource type="Script" path="res://Scripts/traps/Spike.gd" id="1_2rpt4"]
+[ext_resource type="Texture2D" uid="uid://t2f31kmvkxyu" path="res://Assets/Platform/Spikes/Spike_2.png" id="2_iv47n"]
+[ext_resource type="Texture2D" uid="uid://oaneqhfdxqcr" path="res://Assets/Platform/Spikes/Spike_3.png" id="3_68sn2"]
+[ext_resource type="Texture2D" uid="uid://bgdj2qrra44v5" path="res://Assets/Platform/Spikes/Spike_4.png" id="4_8ympf"]
+[ext_resource type="Texture2D" uid="uid://bawjb1rj8e87c" path="res://Assets/Platform/Spikes/Spike_Stone_2.png" id="5_gk0xq"]
+[ext_resource type="Texture2D" uid="uid://sdamnrro0l" path="res://Assets/Platform/Spikes/Spike_Stone_Mouth_Closed.png" id="6_t5ky5"]
+[ext_resource type="Texture2D" uid="uid://cukrtsbvlhqpy" path="res://Assets/Platform/Spikes/Spike_Stone_Eyes.png" id="7_v3ixp"]
+
+[node name="SpikeVar2" type="Area2D"]
+script = ExtResource("1_2rpt4")
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spike" type="Sprite2D" parent="Spikes"]
+position = Vector2(-7.99998, -128)
+rotation = -0.340056
+texture = ExtResource("2_iv47n")
+
+[node name="Spikes2" type="Sprite2D" parent="Spikes"]
+position = Vector2(-101, -120)
+rotation = -0.770434
+texture = ExtResource("2_iv47n")
+
+[node name="Spike3" type="Sprite2D" parent="Spikes"]
+position = Vector2(115, -110)
+rotation = 0.592793
+texture = ExtResource("3_68sn2")
+
+[node name="Spike4" type="Sprite2D" parent="Spikes"]
+position = Vector2(171, 42)
+rotation = 1.26767
+texture = ExtResource("4_8ympf")
+
+[node name="Rock" type="Sprite2D" parent="."]
+texture = ExtResource("5_gk0xq")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+position = Vector2(-16, 10)
+texture = ExtResource("6_t5ky5")
+
+[node name="Eyes" type="Sprite2D" parent="."]
+position = Vector2(-23, -88)
+texture = ExtResource("7_v3ixp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-92, -101, -159, -183, -82, -117, -21, -145, -32, -208, 9, -126, 81, -90, 158, -190, 97, -53, 117, 42, 250, 3, 115, 73, 110, 147, -116, 22, -120, -85)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
