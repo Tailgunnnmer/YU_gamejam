@@ -5,6 +5,8 @@ extends Node2D
 @export var crossover_dimension : Node2D
 @export var player : CharacterBody2D
 
+@export var teleportSound : AudioStreamPlayer 
+
 enum dimensions {GHOST,DEFAULT}
 var current_player_dimension : dimensions = dimensions.DEFAULT
 
@@ -16,6 +18,7 @@ func _ready():
 func _process(delta):
 
 	if Input.is_action_just_pressed("dimension_change"):
+		teleportSound.play()
 		match current_player_dimension:
 			dimensions.DEFAULT:
 				current_player_dimension = dimensions.GHOST
