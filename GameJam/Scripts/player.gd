@@ -45,7 +45,9 @@ func _physics_process(delta):
 			anim.flip_h = false
 		if Input.is_action_just_pressed("ui_left"):
 			anim.flip_h = true
-	
+
+		
+			
 
 func apply_gravity(delta : float)->void:
 	if not is_on_floor():
@@ -56,6 +58,8 @@ func handle_jump()->void:
 		velocity.y = jump_force
 		isJumping = true
 		anim.play("Jump")
+		
+		
 
 func manage_coyote_time()->void:
 	if is_on_floor():
@@ -70,7 +74,7 @@ func movement()->void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x += accelaration * direction
-		if !isJumping:
+		if !isJumping && is_on_floor():
 			anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, deccelaration)
@@ -88,6 +92,8 @@ func check_bounce()->void:
 				break
 
 func bounce(value)->void:
+	isJumping = true
+	anim.play("Jump")
 	velocity.y -= value
 
 func SetRayCastCollisionsDefault()->void:
