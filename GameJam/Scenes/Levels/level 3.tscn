@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_xfib7"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="2_tqt0o"]
-[ext_resource type="Texture2D" uid="uid://bcqsudwlu7fo3" path="res://Assets/Effects/Effects/Sunshine/Sunshine_13.png" id="3_5qfyc"]
-[ext_resource type="Texture2D" uid="uid://dev25hbp3updx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="4_p0cxl"]
-[ext_resource type="Texture2D" uid="uid://dhp4q312ecqlj" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="5_ki0dj"]
+[ext_resource type="Texture2D" uid="uid://dfcil3003wrmx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_13.png" id="3_5qfyc"]
+[ext_resource type="Texture2D" uid="uid://b3jo76gb7yf4r" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="4_p0cxl"]
+[ext_resource type="Texture2D" uid="uid://g4dnceeq2i5l" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="5_ki0dj"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="6_7mblg"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_4vyvc"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="10_tmdyt"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
@@ -193,7 +193,7 @@ polygon = PackedVector2Array(-1083, 626, 318, 695, 719, 695, 1161, 700, 1614, 69
 position = Vector2(0, 216)
 scale = Vector2(0.409714, 0.409714)
 
-[node name="Camera2D" type="Camera2D" parent="Player" index="4"]
+[node name="Camera2D" type="Camera2D" parent="Player" index="3"]
 
 [node name="BaloonPlatform" parent="GhostDimension" index="0" instance=ExtResource("14_7xuud")]
 position = Vector2(4307, 1335)
@@ -634,6 +634,10 @@ scale = Vector2(0.744703, 0.744703)
 position = Vector2(2549, 1627)
 rotation = 1.21448
 scale = Vector2(0.744703, 0.744703)
+
+[node name="Flag" parent="." index="46"]
+position = Vector2(2554, 1157)
+next_level_path = "res://Scenes/Intro.tscn"
 
 [editable path="DefaultDimension/MovingPlatform"]
 [editable path="DefaultDimension/MovingPlatform3"]

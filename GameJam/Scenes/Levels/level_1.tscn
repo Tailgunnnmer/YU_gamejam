@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwaaqsggdsrq" path="res://Assets/Background_1.2_Blur/B_Blur/B_3_1.png" id="5_ywq87"]
 [ext_resource type="Texture2D" uid="uid://djk5t8qmm3dwi" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_1.png" id="6_e3vy3"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="Texture2D" uid="uid://cak6bmua8cw6" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_2.png" id="7_b71ws"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="Texture2D" uid="uid://b0tlh30xcot4c" path="res://Assets/Background_1.2_Blur/B_Blur/B_1_3.png" id="8_ybkpd"]
@@ -26,8 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="13_uq71u"]
 [ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="14_5f4iw"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="15_u81xt"]
-[ext_resource type="Texture2D" uid="uid://cltxjpsy5gow2" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
-[ext_resource type="Texture2D" uid="uid://drefjpuv57e28" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
+[ext_resource type="Texture2D" uid="uid://bs32eqix4xskr" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
+[ext_resource type="Texture2D" uid="uid://cueujs1i4du23" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="27_om75n"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
@@ -256,7 +256,7 @@ rotation = -0.0227376
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
-jump_force = 400.0
+jump_force = 550.0
 
 [node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(1935, 35)
@@ -450,5 +450,9 @@ visible = false
 position = Vector2(182, -302)
 rotation = -0.496984
 shadow_enabled = true
+
+[node name="Flag" parent="." index="15"]
+position = Vector2(1936, -34)
+next_level_path = "res://Scenes/Levels/level 2.tscn"
 
 [editable path="CrossDimension/MovingPlatform"]

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_020cm"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_r8seo"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="3_j8lxc"]
-[ext_resource type="Texture2D" uid="uid://dhp4q312ecqlj" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
-[ext_resource type="Texture2D" uid="uid://dev25hbp3updx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
+[ext_resource type="Texture2D" uid="uid://g4dnceeq2i5l" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
+[ext_resource type="Texture2D" uid="uid://b3jo76gb7yf4r" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="8_7vvfn"]
 [ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="8_c3e2h"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="9_bgc67"]
@@ -168,7 +168,7 @@ collision_mask = 2
 jump_force = 800.0
 
 [node name="BaloonPlatform3" parent="GhostDimension" index="1" instance=ExtResource("11_s7lae")]
-position = Vector2(2828, 1210)
+position = Vector2(2861, 1261)
 scale = Vector2(0.553852, 0.553852)
 collision_layer = 2
 collision_mask = 2
@@ -519,6 +519,10 @@ position = Vector2(320, 0)
 texture = ExtResource("24_g5va3")
 centered = false
 metadata/_edit_lock_ = true
+
+[node name="Flag" parent="." index="32"]
+position = Vector2(4130, 554)
+next_level_path = "res://Scenes/Levels/level 3.tscn"
 
 [editable path="CrossDimension/MovingPlatform7"]
 [editable path="CrossDimension/MovingPlatform"]
