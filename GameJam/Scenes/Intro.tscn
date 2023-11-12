@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cr8lg5q635j8y" path="res://Assets/Main_Menu/Vinyet.png" id="3_wpwoe"]
 [ext_resource type="FontFile" uid="uid://demj4oo7rejip" path="res://Assets/Fonts/Roboto-Light.ttf" id="4_hy2gj"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="6_kfh2a"]
-[ext_resource type="Texture2D" uid="uid://djtckrojbn2hj" path="res://Scenes/untitled.png" id="8_f1hwq"]
+[ext_resource type="Texture2D" uid="uid://djtckrojbn2hj" path="res://Assets/Background/Outro.png" id="8_v0pim"]
 
 [sub_resource type="Animation" id="Animation_567km"]
 resource_name = "Mini Intro"
@@ -951,7 +951,7 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("8_f1hwq")
+texture = ExtResource("8_v0pim")
 
 [node name="Label" type="Label" parent="OutroCanvas/Outro"]
 layout_mode = 1
