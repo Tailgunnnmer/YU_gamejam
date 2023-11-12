@@ -48,5 +48,6 @@ lifetime = 0.7
 modulate = Color(0.709804, 0.729412, 0.929412, 0.360784)
 show_behind_parent = true
 material = SubResource("CanvasItemMaterial_e681b")
-scale = Vector2(-0.135908, -0.14696)
+position = Vector2(0, -12)
+scale = Vector2(-0.173864, -0.188003)
 texture = ExtResource("2_l0x8i")
