@@ -9,7 +9,8 @@ extends CharacterBody2D
 @export_category("Coyote Time")
 @export var coyote_time : float = 0.05
 var coyote_timer : float
-var isAlive : bool = true 
+var isAlive : bool = true
+var isJumping : bool = false 
 
 @onready var bounce_cast : Node2D = get_node("RaycastContainer")
 @onready var anim : AnimatedSprite2D = get_node("AnimatedSprite2D")
@@ -53,11 +54,13 @@ func apply_gravity(delta : float)->void:
 func handle_jump()->void:
 	if Input.is_action_just_pressed("ui_accept") && coyote_timer>0:
 		velocity.y = jump_force
+		isJumping = true
 		anim.play("Jump")
 
 func manage_coyote_time()->void:
 	if is_on_floor():
 		coyote_timer = coyote_time
+		isJumping = false
 
 	if !is_on_floor() && coyote_timer >0:
 		coyote_timer -= get_process_delta_time()
@@ -67,7 +70,8 @@ func movement()->void:
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x += accelaration * direction
-		anim.play("run")
+		if !isJumping:
+			anim.play("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, deccelaration)
 		anim.play("default")
