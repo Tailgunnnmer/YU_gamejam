@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://1vrk3ilh8u37"]
+[gd_scene load_steps=8 format=3 uid="uid://1vrk3ilh8u37"]
 
 [ext_resource type="Script" path="res://Scripts/traps/Spike.gd" id="1_3ct3f"]
 [ext_resource type="Texture2D" uid="uid://t2f31kmvkxyu" path="res://Assets/Platform/Spikes/Spike_2.png" id="2_24lwq"]
@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://vnot0dqyaavg" path="res://Assets/Platform/Spikes/Spike_Stone_1.png" id="5_wnio7"]
 [ext_resource type="Texture2D" uid="uid://cmhdx3qmu3ltg" path="res://Assets/Platform/Spikes/Spike_Stone_Mouth_Open.png" id="6_ncf7n"]
 [ext_resource type="Texture2D" uid="uid://cukrtsbvlhqpy" path="res://Assets/Platform/Spikes/Spike_Stone_Eyes.png" id="7_icaw6"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_emwhc"]
-polygon = PackedVector2Array(-239, -56, -96, -16, -83, -27, -157, -149, -141, -147, -49, -64, 81, -172, 32, -88, 87, -52, 157, -139, 110, -30, 140, -3, 126, 61, 84, 94, -126, 79, -141, 26, -111, 0)
 
 [node name="SpikeVar3" type="Area2D"]
 script = ExtResource("1_3ct3f")
@@ -52,9 +49,5 @@ texture = ExtResource("7_icaw6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-239, -56, -96, -16, -83, -27, -157, -149, -141, -147, -49, -64, 81, -172, 32, -88, 87, -52, 157, -139, 110, -30, 140, -3, 126, 61, 84, 94, -126, 79, -141, 26, -111, 0)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="CollisionPolygon2D"]
-modulate = Color(1, 1, 1, 0)
-occluder = SubResource("OccluderPolygon2D_emwhc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
