@@ -157,35 +157,93 @@ amount = 20
 [node name="Sprite2D" type="Sprite2D" parent="WorldEnvironment" index="19"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_4oein")
-position = Vector2(297, 266)
+position = Vector2(-85.9215, 267.997)
 rotation = -0.00521452
+scale = Vector2(0.418486, 1)
 texture = ExtResource("3_5qfyc")
 
-[node name="Sprite2D2" type="Sprite2D" parent="WorldEnvironment" index="20"]
+[node name="Sprite2D8" type="Sprite2D" parent="WorldEnvironment" index="20"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_4oein")
-position = Vector2(5351, 1010)
+position = Vector2(235, 248)
+rotation = -0.146678
+scale = Vector2(0.418486, 1)
+texture = ExtResource("3_5qfyc")
+
+[node name="Sprite2D9" type="Sprite2D" parent="WorldEnvironment" index="21"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(616, 240)
+rotation = -0.354392
+scale = Vector2(0.418486, 1)
+texture = ExtResource("3_5qfyc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="WorldEnvironment" index="22"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(5940.2, 1070)
 rotation = 0.101484
-scale = Vector2(-1.33795, 1.91983)
+scale = Vector2(-0.438554, 1.91983)
 texture = ExtResource("3_5qfyc")
 
-[node name="Sprite2D3" type="Sprite2D" parent="WorldEnvironment" index="21"]
+[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="23"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_4oein")
-position = Vector2(2454, 203)
+position = Vector2(5534, 1070)
+rotation = 0.191984
+scale = Vector2(-0.438554, 1.91983)
+texture = ExtResource("3_5qfyc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="WorldEnvironment" index="24"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2052.99, 206.388)
 rotation = -0.00844732
-scale = Vector2(-0.563187, 0.961888)
+scale = Vector2(-0.14545, 0.961888)
 texture = ExtResource("4_p0cxl")
 
-[node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="22"]
+[node name="Sprite2D10" type="Sprite2D" parent="WorldEnvironment" index="25"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_4oein")
-position = Vector2(2338, 1426)
+position = Vector2(2255, 204)
+rotation = -0.00844732
+scale = Vector2(-0.14545, 0.961888)
+texture = ExtResource("4_p0cxl")
+
+[node name="Sprite2D11" type="Sprite2D" parent="WorldEnvironment" index="26"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2449, 204)
+rotation = -0.0531805
+scale = Vector2(-0.14545, 0.961888)
+texture = ExtResource("4_p0cxl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="27"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2066.49, 1489.79)
 rotation = -0.230752
-scale = Vector2(-0.955773, 1.20918)
+scale = Vector2(-0.324049, 1.20918)
 texture = ExtResource("5_ki0dj")
 
-[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="23"]
+[node name="Sprite2D6" type="Sprite2D" parent="WorldEnvironment" index="28"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2301.88, 1346.3)
+rotation = -0.0588833
+scale = Vector2(-0.493404, 1.19607)
+skew = -0.443314
+texture = ExtResource("5_ki0dj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="WorldEnvironment" index="29"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2587.77, 1343.39)
+rotation = -0.743088
+scale = Vector2(-0.324049, 1.59996)
+texture = ExtResource("5_ki0dj")
+
+[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="30"]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-1083, 626, 318, 695, 719, 695, 1161, 700, 1614, 697, 1982, 693, 2446, 677, 2694, 673, 2902, 695, 3159, 674, 3308, 671, 3514, 658, 3706, 679, 3738, 756, 3417, 738, 2308, 772, 2036, 861, 1976, 988, 1995.97, 1565.89, 2060, 1748, 2266, 1815, 5077, 1836, 5730, 1661, 6165, 1419, 6297, 1090, 6198, 616, 5603, 169, 4844, -10, 3088, -113, -179, -33, -321, 112, -297, 435, -282, 588, -56, 735, -1189, 591, -1083, -858, 6883, -771, 6911, 2356, -496, 2348)
 

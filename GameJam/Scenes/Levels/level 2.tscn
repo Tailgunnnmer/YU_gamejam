@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_020cm"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_r8seo"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="3_j8lxc"]
-[ext_resource type="Texture2D" uid="uid://g4dnceeq2i5l" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
-[ext_resource type="Texture2D" uid="uid://b3jo76gb7yf4r" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
+[ext_resource type="Texture2D" uid="uid://dhp4q312ecqlj" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
+[ext_resource type="Texture2D" uid="uid://dev25hbp3updx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="8_7vvfn"]
 [ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="8_c3e2h"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="9_bgc67"]
@@ -125,32 +125,80 @@ rotation = 1.35102
 [node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="16"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_mvje7")
-position = Vector2(1925, 561)
-rotation = -0.0237577
-scale = Vector2(-1.23224, 1.63796)
+position = Vector2(1785, 555)
+rotation = -0.0211253
+scale = Vector2(-0.537578, 1.63796)
 texture = ExtResource("4_6gl3x")
 
-[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="17"]
+[node name="Sprite2D11" type="Sprite2D" parent="WorldEnvironment" index="17"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_mvje7")
-position = Vector2(3687, 714)
-rotation = -0.0237577
-scale = Vector2(1.0801, 2.18829)
-texture = ExtResource("5_4ydog")
+position = Vector2(2176, 518)
+rotation = -0.166005
+scale = Vector2(-0.608323, 1.63796)
+texture = ExtResource("4_6gl3x")
 
-[node name="Sprite2D6" type="Sprite2D" parent="WorldEnvironment" index="18"]
+[node name="Sprite2D12" type="Sprite2D" parent="WorldEnvironment" index="18"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_mvje7")
-position = Vector2(58, 392)
+position = Vector2(1445, 482)
+rotation = 0.102612
+scale = Vector2(0.39634, 1.63796)
+texture = ExtResource("4_6gl3x")
+
+[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="19"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(4277.94, 699.958)
 rotation = -0.0237577
-scale = Vector2(-0.90801, 1.2066)
+scale = Vector2(0.464359, 2.18829)
 texture = ExtResource("5_4ydog")
 
-[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="19"]
+[node name="Sprite2D7" type="Sprite2D" parent="WorldEnvironment" index="20"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(3683, 652)
+rotation = 0.0179952
+scale = Vector2(0.464359, 2.18829)
+texture = ExtResource("5_4ydog")
+
+[node name="Sprite2D8" type="Sprite2D" parent="WorldEnvironment" index="21"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(3180.92, 634.017)
+rotation = 0.111381
+scale = Vector2(0.342302, 2.19164)
+texture = ExtResource("5_4ydog")
+
+[node name="Sprite2D6" type="Sprite2D" parent="WorldEnvironment" index="22"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(-271, 365)
+rotation = -0.181737
+scale = Vector2(-0.453352, 1.2066)
+texture = ExtResource("5_4ydog")
+
+[node name="Sprite2D9" type="Sprite2D" parent="WorldEnvironment" index="23"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(248, 302)
+rotation = -0.256772
+scale = Vector2(-0.346425, 1.2066)
+texture = ExtResource("5_4ydog")
+
+[node name="Sprite2D10" type="Sprite2D" parent="WorldEnvironment" index="24"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_mvje7")
+position = Vector2(675, 224)
+rotation = -0.296963
+scale = Vector2(-0.346425, 1.2066)
+texture = ExtResource("5_4ydog")
+
+[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="25"]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-209, 900, 137, 848, 446, 844, 606, 855, 1241, 787, 1500, 768, 1578, 875, 1565, 1380, -2406, 1826, -1947, -1158, 2627, -1556, 2626, -253, -205, -172, -435, -130, -544, 30, -599, 630, -560, 818, -464, 898)
 
-[node name="Polygon2D2" type="Polygon2D" parent="WorldEnvironment" index="20"]
+[node name="Polygon2D2" type="Polygon2D" parent="WorldEnvironment" index="26"]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(838, 2364, 882, 1304, 1247, 1137, 1663, 1454, 2445, 1258, 2659, 1540, 3147, 1629, 3848, 1629, 4211, 1403, 4369, 1179, 4384, 371, 4328, 121, 4114, -105, 3788, -218, 3130, -210, 2538, -250, 2390, -1294, 5532, -1140, 5822, 2418)
 
