@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=35 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://bs32eqix4xskr" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
 [ext_resource type="Texture2D" uid="uid://cueujs1i4du23" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="27_om75n"]
+[ext_resource type="AudioStream" uid="uid://dlo5vf2cc4w3h" path="res://Audio/dimChange.mp3" id="30_04ygc"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
 
@@ -454,5 +455,9 @@ shadow_enabled = true
 [node name="Flag" parent="." index="15"]
 position = Vector2(1936, -34)
 next_level_path = "res://Scenes/Levels/level 2.tscn"
+
+[node name="TelportSound" parent="." index="16"]
+stream = ExtResource("30_04ygc")
+volume_db = -10.0
 
 [editable path="CrossDimension/MovingPlatform"]
