@@ -1,6 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://i6pm1ic1q8s2"]
+[gd_scene load_steps=21 format=3 uid="uid://i6pm1ic1q8s2"]
 
-[ext_resource type="LabelSettings" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
+[ext_resource type="LabelSettings" uid="uid://ccy3f3l2q3df1" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_64opl"]
 [ext_resource type="AudioStream" uid="uid://drxvdgseynvqd" path="res://Audio/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3" id="2_f8j15"]
 [ext_resource type="Texture2D" uid="uid://l3c57rqqbotw" path="res://Assets/Main_Menu/Game_Jam_Main_menu.png" id="2_lyifi"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cr8lg5q635j8y" path="res://Assets/Main_Menu/Vinyet.png" id="3_wpwoe"]
 [ext_resource type="FontFile" uid="uid://demj4oo7rejip" path="res://Assets/Fonts/Roboto-Light.ttf" id="4_hy2gj"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="6_kfh2a"]
+[ext_resource type="Texture2D" uid="uid://djtckrojbn2hj" path="res://Scenes/untitled.png" id="8_f1hwq"]
 
 [sub_resource type="Animation" id="Animation_567km"]
 resource_name = "Mini Intro"
@@ -27,6 +28,115 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_bcwud"]
 resource_name = "Outro"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroCanvas/Intro Elements:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutroCanvas/Outro:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OutroCanvas/Outro/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(11.3, 12.3, 15.4, 16.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OutroCanvas/Outro/TextureRect:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OutroCanvas/Outro/Label3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.7, 11.7, 15.4, 16.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OutroCanvas/Outro/Label2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.8, 5.8, 8.7, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OutroCanvas/Outro/Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 8.7, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OutroCanvas/ColorRect2:visible")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(17, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OutroCanvas/ColorRect2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(17, 18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mj7d5"]
 length = 0.001
@@ -233,6 +343,102 @@ tracks/16/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("OutroCanvas/Outro:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("OutroCanvas/Outro/TextureRect:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("OutroCanvas/Outro/TextureRect:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("OutroCanvas/Outro/Label3:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("OutroCanvas/Outro/Label2:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("OutroCanvas/Outro/Label:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("OutroCanvas/ColorRect2:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("OutroCanvas/ColorRect2:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_a45j2"]
@@ -633,10 +839,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 266.0
-offset_top = 299.5
-offset_right = 1014.0
-offset_bottom = 420.5
+offset_left = -694.0
+offset_top = -240.5
+offset_right = 54.0
+offset_bottom = -119.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "What happens"
@@ -651,10 +857,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 512.0
-offset_top = 599.0
-offset_right = 1260.0
-offset_bottom = 720.0
+offset_left = -1408.0
+offset_top = -481.0
+offset_right = -660.0
+offset_bottom = -360.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "When We Die?"
@@ -676,10 +882,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 478.0
-offset_top = 599.0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_left = -1442.0
+offset_top = -481.0
+offset_right = -640.0
+offset_bottom = -360.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "A second chance..."
@@ -693,10 +899,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = 239.0
-offset_right = 1343.0
-offset_bottom = 481.0
+offset_left = -1023.0
+offset_top = -301.0
+offset_right = 383.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Too many souls, 
@@ -711,10 +917,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = 478.0
-offset_right = 1343.0
-offset_bottom = 720.0
+offset_left = -1023.0
+offset_top = -62.0
+offset_right = 383.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Prove your worth."
@@ -722,11 +928,83 @@ label_settings = ExtResource("1_4apag")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Outro" type="Control" parent="IntroCanvas"]
+[node name="OutroCanvas" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="OutroCanvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Outro" type="Control" parent="OutroCanvas"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="OutroCanvas/Outro"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("8_f1hwq")
+
+[node name="Label" type="Label" parent="OutroCanvas/Outro"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1332.0
+offset_top = 76.0
+offset_right = 1332.0
+offset_bottom = 439.0
+grow_horizontal = 2
+text = "You have made it through the trails 
+and proven your soul worthy"
+label_settings = ExtResource("1_4apag")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="OutroCanvas/Outro"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -632.0
+offset_top = -1.5
+offset_right = 632.0
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "A new beginning awaits you...
+"
+label_settings = ExtResource("1_4apag")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="OutroCanvas/Outro"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.5
+offset_top = -62.0
+offset_right = 174.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+The end"
+label_settings = ExtResource("1_4apag")
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_f8j15")
