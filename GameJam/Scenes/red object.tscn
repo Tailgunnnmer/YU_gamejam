@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cedjis8mig21p"]
+[gd_scene load_steps=13 format=3 uid="uid://cedjis8mig21p"]
 
 [ext_resource type="Texture2D" uid="uid://cuediwt5vc3nq" path="res://Assets/Platform/Glow/B_Red_Middle.png" id="1_f0vvd"]
 [ext_resource type="Texture2D" uid="uid://blqithmjaaf0t" path="res://Assets/Platform/Glow/B_Red_L2.png" id="2_b8gh4"]
@@ -68,6 +68,9 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4d52o"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8n6vr"]
+blend_mode = 1
+
 [sub_resource type="Gradient" id="Gradient_mg7gp"]
 offsets = PackedFloat32Array(0, 0.113265, 0.839796, 1)
 colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
@@ -104,6 +107,12 @@ libraries = {
 [node name="BRedMiddle" type="Sprite2D" parent="Node2D2"]
 material = SubResource("CanvasItemMaterial_4d52o")
 texture = ExtResource("1_f0vvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2/BRedMiddle"]
+modulate = Color(1, 1, 1, 0.360784)
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_8n6vr")
+texture = ExtResource("3_0lrcd")
 
 [node name="Node2D" type="Node2D" parent="Node2D2"]
 
