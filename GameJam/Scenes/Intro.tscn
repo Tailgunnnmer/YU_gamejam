@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://i6pm1ic1q8s2"]
 
-[ext_resource type="LabelSettings" uid="uid://ccy3f3l2q3df1" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
+[ext_resource type="LabelSettings" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_64opl"]
 [ext_resource type="AudioStream" uid="uid://drxvdgseynvqd" path="res://Audio/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3" id="2_f8j15"]
 [ext_resource type="Texture2D" uid="uid://l3c57rqqbotw" path="res://Assets/Main_Menu/Game_Jam_Main_menu.png" id="2_lyifi"]
@@ -839,10 +839,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -694.0
-offset_top = -240.5
-offset_right = 54.0
-offset_bottom = -119.5
+offset_left = 266.0
+offset_top = 299.5
+offset_right = 1014.0
+offset_bottom = 420.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "What happens"
@@ -857,10 +857,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1408.0
-offset_top = -481.0
-offset_right = -660.0
-offset_bottom = -360.0
+offset_left = 512.0
+offset_top = 599.0
+offset_right = 1260.0
+offset_bottom = 720.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "When We Die?"
@@ -882,10 +882,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1442.0
-offset_top = -481.0
-offset_right = -640.0
-offset_bottom = -360.0
+offset_left = 478.0
+offset_top = 599.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "A second chance..."
@@ -899,10 +899,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1023.0
-offset_top = -301.0
-offset_right = 383.0
-offset_bottom = -59.0
+offset_left = -63.0
+offset_top = 239.0
+offset_right = 1343.0
+offset_bottom = 481.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Too many souls, 
@@ -917,10 +917,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1023.0
-offset_top = -62.0
-offset_right = 383.0
-offset_bottom = 180.0
+offset_left = -63.0
+offset_top = 478.0
+offset_right = 1343.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Prove your worth."
@@ -929,6 +929,7 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="OutroCanvas" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="OutroCanvas"]
 anchors_preset = 15

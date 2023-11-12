@@ -9,6 +9,7 @@ var level_time_dict : Dictionary = {
 }
 
 var isInGhost : bool
+var ending : bool = false
 
 func _ready():
 	isInGhost = false

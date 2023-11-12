@@ -249,7 +249,7 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-1083, 626, 318, 695, 719, 695, 1161, 700, 1614, 697, 1982, 693, 2446, 677, 2694, 673, 2902, 695, 3159, 674, 3308, 671, 3514, 658, 3706, 679, 3738, 756, 3417, 738, 2308, 772, 2036, 861, 1976, 988, 1995.97, 1565.89, 2060, 1748, 2266, 1815, 5077, 1836, 5730, 1661, 6165, 1419, 6297, 1090, 6198, 616, 5603, 169, 4844, -10, 3088, -113, -179, -33, -321, 112, -297, 435, -282, 588, -56, 735, -1189, 591, -1083, -858, 6883, -771, 6911, 2356, -496, 2348)
 
 [node name="Player" parent="." index="1"]
-position = Vector2(0, 216)
+position = Vector2(-12.9998, 328)
 scale = Vector2(0.409714, 0.409714)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
@@ -697,6 +697,7 @@ scale = Vector2(0.744703, 0.744703)
 [node name="Flag" parent="." index="46"]
 position = Vector2(2554, 1157)
 next_level_path = "res://Scenes/Intro.tscn"
+ending_level = true
 
 [node name="TelportSound" parent="." index="47"]
 stream = ExtResource("32_dme0m")
