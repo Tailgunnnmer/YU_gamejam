@@ -9,24 +9,24 @@ var skip : bool = false
 var canSkip : bool=false
 
 func _ready():
-    await get_tree().create_timer(2).timeout
-    canSkip = true
-    
+	await get_tree().create_timer(2).timeout
+	canSkip = true
+	
 
 func _on_button_pressed():
-    get_tree().change_scene_to_packed(level1)
+	get_tree().change_scene_to_packed(level1)
 
 func _input(event):
 
-    if event is InputEventMouseMotion:
-        return
+	if event is InputEventMouseMotion:
+		return
 
-    if canSkip:
-        if !skip &&  anim.is_playing():
-            skip = true
-            color_rect.visible = false
-            intro.visible = false
-            anim.stop()
+	if canSkip:
+		if !skip &&  anim.is_playing():
+			skip = true
+			color_rect.visible = false
+			intro.visible = false
+			anim.stop()
 
 func _on_animation_player_animation_finished(anim_name:StringName):
-    intro.visible = false
+	intro.visible = false

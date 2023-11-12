@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://i6pm1ic1q8s2"]
+[gd_scene load_steps=20 format=3 uid="uid://i6pm1ic1q8s2"]
 
-[ext_resource type="LabelSettings" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
+[ext_resource type="LabelSettings" uid="uid://ccy3f3l2q3df1" path="res://Assets/Font_LabelSettings.tres" id="1_4apag"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_64opl"]
 [ext_resource type="AudioStream" uid="uid://drxvdgseynvqd" path="res://Audio/🌠 Dark Chill Atmospheric Music (For Videos) - Giving Way by AERØHEAD 🇺🇸.mp3" id="2_f8j15"]
 [ext_resource type="Texture2D" uid="uid://l3c57rqqbotw" path="res://Assets/Main_Menu/Game_Jam_Main_menu.png" id="2_lyifi"]
@@ -249,7 +249,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("IntroCanvas/Intro Elements/Label:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -261,7 +261,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("IntroCanvas/Intro Elements/Label2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -285,7 +285,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("IntroCanvas/Intro Elements/Label3:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
@@ -333,7 +333,7 @@ tracks/7/keys = {
 }
 tracks/8/type = "value"
 tracks/8/imported = false
-tracks/8/enabled = true
+tracks/8/enabled = false
 tracks/8/path = NodePath("IntroCanvas/Intro Elements/Label4:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
@@ -345,7 +345,7 @@ tracks/8/keys = {
 }
 tracks/9/type = "value"
 tracks/9/imported = false
-tracks/9/enabled = true
+tracks/9/enabled = false
 tracks/9/path = NodePath("IntroCanvas/Intro Elements/Label6:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
@@ -381,7 +381,7 @@ tracks/11/keys = {
 }
 tracks/12/type = "value"
 tracks/12/imported = false
-tracks/12/enabled = true
+tracks/12/enabled = false
 tracks/12/path = NodePath("IntroCanvas/Intro Elements/Label7:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
@@ -393,7 +393,7 @@ tracks/12/keys = {
 }
 tracks/13/type = "value"
 tracks/13/imported = false
-tracks/13/enabled = true
+tracks/13/enabled = false
 tracks/13/path = NodePath("IntroCanvas/Intro Elements/Label5:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
@@ -422,15 +422,19 @@ tracks/15/path = NodePath("IntroCanvas/ColorRect:visible")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(21),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 21),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [true, false]
 }
+
+[sub_resource type="Animation" id="Animation_bcwud"]
+resource_name = "Outro"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xk0jn"]
 _data = {
 "Mini Intro": SubResource("Animation_567km"),
+"Outro": SubResource("Animation_bcwud"),
 "RESET": SubResource("Animation_mj7d5"),
 "SkipableIntro": SubResource("Animation_a45j2")
 }
@@ -629,10 +633,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 266.0
-offset_top = 299.5
-offset_right = 1014.0
-offset_bottom = 420.5
+offset_left = -694.0
+offset_top = -240.5
+offset_right = 53.999
+offset_bottom = -119.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "What happens"
@@ -647,10 +651,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 512.0
-offset_top = 599.0
-offset_right = 1260.0
-offset_bottom = 720.0
+offset_left = -1408.0
+offset_top = -481.0
+offset_right = -660.0
+offset_bottom = -360.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "When We Die?"
@@ -672,10 +676,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 478.0
-offset_top = 599.0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_left = -1442.0
+offset_top = -481.0
+offset_right = -640.0
+offset_bottom = -360.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "A second chance..."
@@ -689,10 +693,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = 239.0
-offset_right = 1343.0
-offset_bottom = 481.0
+offset_left = -1023.0
+offset_top = -301.0
+offset_right = 383.0
+offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Too many souls, 
@@ -702,21 +706,27 @@ horizontal_alignment = 1
 
 [node name="Label7" type="Label" parent="IntroCanvas/Intro Elements"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -63.0
-offset_top = 478.0
-offset_right = 1343.0
-offset_bottom = 720.0
+anchor_bottom = 0.5
+offset_left = -1023.0
+offset_top = -62.0
+offset_right = 383.0
+offset_bottom = 180.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 text = "Prove your worth."
 label_settings = ExtResource("1_4apag")
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="Outro" type="Control" parent="IntroCanvas"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_f8j15")
