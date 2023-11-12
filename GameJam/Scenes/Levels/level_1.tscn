@@ -430,4 +430,8 @@ position = Vector2(182, -302)
 rotation = -0.496984
 shadow_enabled = true
 
+[node name="Flag" parent="." index="16"]
+position = Vector2(1924, -39)
+next_level_path = "res://Scenes/Levels/level 2.tscn"
+
 [editable path="CrossDimension/MovingPlatform"]

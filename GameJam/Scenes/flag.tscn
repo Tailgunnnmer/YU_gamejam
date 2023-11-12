@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgixavmjs1o8s"]
+
+[ext_resource type="Script" path="res://Scripts/Flag.gd" id="1_ytfln"]
+[ext_resource type="PackedScene" uid="uid://c12mgplnirrbs" path="res://Particles/fire.tscn" id="2_kfebt"]
+[ext_resource type="Texture2D" uid="uid://dg7up2ikv3lqe" path="res://Assets/Torch/Kupa.png" id="3_hqp3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t50f4"]
+size = Vector2(202, 181)
+
+[node name="Flag" type="Area2D"]
+script = ExtResource("1_ytfln")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_kfebt")]
+position = Vector2(0, -68)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.164912, 0.164912)
+texture = ExtResource("3_hqp3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -35.5)
+shape = SubResource("RectangleShape2D_t50f4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

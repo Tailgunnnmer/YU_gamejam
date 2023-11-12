@@ -490,6 +490,10 @@ texture = ExtResource("24_g5va3")
 centered = false
 metadata/_edit_lock_ = true
 
+[node name="Flag" parent="." index="34"]
+position = Vector2(4135, 557)
+next_level_path = "res://Scenes/Levels/level 3.tscn"
+
 [editable path="CrossDimension/MovingPlatform7"]
 [editable path="CrossDimension/MovingPlatform"]
 [editable path="CrossDimension/MovingPlatform6"]

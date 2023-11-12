@@ -598,6 +598,10 @@ position = Vector2(2549, 1627)
 rotation = 1.21448
 scale = Vector2(0.744703, 0.744703)
 
+[node name="Flag" parent="." index="47"]
+position = Vector2(2545, 1156)
+next_level_path = "res://Scenes/Intro.tscn"
+
 [editable path="DefaultDimension/MovingPlatform"]
 [editable path="DefaultDimension/MovingPlatform3"]
 [editable path="DefaultDimension/MovingPlatform2"]

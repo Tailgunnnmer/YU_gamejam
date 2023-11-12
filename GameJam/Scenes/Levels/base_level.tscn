@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgfckltyff5nu"]
+[gd_scene load_steps=15 format=3 uid="uid://cgfckltyff5nu"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_6ogtn"]
 [ext_resource type="PackedScene" uid="uid://bpyn6ghfvobk8" path="res://Scenes/player.tscn" id="1_d3bgk"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://demj4oo7rejip" path="res://Assets/Fonts/Roboto-Light.ttf" id="5_8480x"]
 [ext_resource type="Texture2D" uid="uid://cx8l2ytmp5tjv" path="res://Assets/33401-1-soul-eater-transparent-thumb.png" id="6_6l26a"]
 [ext_resource type="Shader" path="res://Shaders/transition.gdshader" id="7_n1evy"]
+[ext_resource type="PackedScene" uid="uid://bgixavmjs1o8s" path="res://Scenes/flag.tscn" id="8_pfsdj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_otnr1"]
 distance = -164.0
@@ -152,3 +153,7 @@ grow_vertical = 2
 libraries = {
 "": SubResource("AnimationLibrary_iay0v")
 }
+
+[node name="Flag" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("8_pfsdj")]
+position = Vector2(0, 1014)
+game_manager = NodePath("..")
