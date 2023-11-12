@@ -1,11 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://b2ewkkicwllln"]
+[gd_scene load_steps=33 format=3 uid="uid://b2ewkkicwllln"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_cm5ew"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_020cm"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_r8seo"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="3_j8lxc"]
-[ext_resource type="Texture2D" uid="uid://dhp4q312ecqlj" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
-[ext_resource type="Texture2D" uid="uid://dev25hbp3updx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
+[ext_resource type="Texture2D" uid="uid://g4dnceeq2i5l" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="4_6gl3x"]
+[ext_resource type="Texture2D" uid="uid://b3jo76gb7yf4r" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="5_4ydog"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="8_7vvfn"]
 [ext_resource type="PackedScene" uid="uid://cawkmdwape13t" path="res://Scenes/Platforms/moving_black_platform.tscn" id="8_c3e2h"]
 [ext_resource type="PackedScene" uid="uid://drbic4kwdw5yt" path="res://Scenes/Platforms/moving_platform.tscn" id="9_bgc67"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="22_u6tph"]
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="23_es5qd"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="24_g5va3"]
+[ext_resource type="AudioStream" uid="uid://dlo5vf2cc4w3h" path="res://Audio/dimChange.mp3" id="29_qpw0l"]
 
 [sub_resource type="Environment" id="Environment_yopeo"]
 background_mode = 3
@@ -571,6 +572,10 @@ metadata/_edit_lock_ = true
 [node name="Flag" parent="." index="32"]
 position = Vector2(4130, 554)
 next_level_path = "res://Scenes/Levels/level 3.tscn"
+
+[node name="TelportSound" parent="." index="33"]
+stream = ExtResource("29_qpw0l")
+volume_db = -10.0
 
 [editable path="CrossDimension/MovingPlatform7"]
 [editable path="CrossDimension/MovingPlatform"]

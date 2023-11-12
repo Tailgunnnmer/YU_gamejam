@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwaaqsggdsrq" path="res://Assets/Background_1.2_Blur/B_Blur/B_3_1.png" id="5_ywq87"]
 [ext_resource type="Texture2D" uid="uid://djk5t8qmm3dwi" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_1.png" id="6_e3vy3"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="Texture2D" uid="uid://cak6bmua8cw6" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_2.png" id="7_b71ws"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="Texture2D" uid="uid://b0tlh30xcot4c" path="res://Assets/Background_1.2_Blur/B_Blur/B_1_3.png" id="8_ybkpd"]
@@ -26,8 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="13_uq71u"]
 [ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="14_5f4iw"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="15_u81xt"]
-[ext_resource type="Texture2D" uid="uid://cltxjpsy5gow2" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
-[ext_resource type="Texture2D" uid="uid://drefjpuv57e28" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
+[ext_resource type="Texture2D" uid="uid://bs32eqix4xskr" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
+[ext_resource type="Texture2D" uid="uid://cueujs1i4du23" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="27_om75n"]
 [ext_resource type="AudioStream" uid="uid://dlo5vf2cc4w3h" path="res://Audio/dimChange.mp3" id="30_04ygc"]
 
@@ -210,54 +210,20 @@ rotation = 0.116079
 [node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="6"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(128.34, 640.421)
+position = Vector2(599, 486)
 rotation = -0.230752
-scale = Vector2(-0.270357, 1.8137)
+scale = Vector2(-0.819609, 1.73466)
 texture = ExtResource("17_jj5fq")
 
-[node name="Sprite2D8" type="Sprite2D" parent="WorldEnvironment" index="7"]
+[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="7"]
 modulate = Color(0.909804, 1, 1, 0.298039)
 material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(386.575, 627.948)
-rotation = -0.329201
-scale = Vector2(-0.145899, 1.84462)
-texture = ExtResource("17_jj5fq")
-
-[node name="Sprite2D9" type="Sprite2D" parent="WorldEnvironment" index="8"]
-modulate = Color(0.909804, 1, 1, 0.298039)
-material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(730.075, 613.847)
-rotation = -0.374631
-scale = Vector2(-0.249132, 1.8804)
-texture = ExtResource("17_jj5fq")
-
-[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="9"]
-modulate = Color(0.909804, 1, 1, 0.298039)
-material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(1999, 499.022)
+position = Vector2(1535, 499)
 rotation = 4.64469e-05
-scale = Vector2(0.416208, 2.00094)
+scale = Vector2(1.01317, 2.00094)
 texture = ExtResource("18_fc6ht")
 
-[node name="Sprite2D6" type="Sprite2D" parent="WorldEnvironment" index="10"]
-modulate = Color(0.909804, 1, 1, 0.298039)
-material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(1634, 439)
-rotation = 4.64469e-05
-scale = Vector2(0.379186, 2.00094)
-skew = 0.0890118
-texture = ExtResource("18_fc6ht")
-
-[node name="Sprite2D7" type="Sprite2D" parent="WorldEnvironment" index="11"]
-modulate = Color(0.909804, 1, 1, 0.298039)
-material = SubResource("CanvasItemMaterial_57e6j")
-position = Vector2(1287.8, 477.001)
-rotation = 4.64469e-05
-scale = Vector2(0.406367, 2.00094)
-skew = 0.148353
-texture = ExtResource("18_fc6ht")
-
-[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="12"]
+[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="8"]
 color = Color(0, 0, 0, 1)
 antialiased = true
 polygon = PackedVector2Array(151, -17, 1508, -445, 2968, -504, 3519, 143, 3361, 1389, 2220, 1044, 2242, 2265, 4397, 1907, 4243, -188, 4354, -1195, -2273, -1016, -2258, 2234, 2265, 2207, 2256, 1037, 1273, 1289, 1041, 1431, 671, 1455, 461, 1341, 171, 1272, -78, 1087, -168, 777, -109, 290, -53, 138)
