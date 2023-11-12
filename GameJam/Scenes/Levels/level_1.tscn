@@ -235,7 +235,7 @@ rotation = -0.0227376
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
-jump_force = 400.0
+jump_force = 600.0
 
 [node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(1935, 35)
