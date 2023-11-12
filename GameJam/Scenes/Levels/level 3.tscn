@@ -1,11 +1,14 @@
-[gd_scene load_steps=31 format=3 uid="uid://cs7el0pq4dasg"]
+[gd_scene load_steps=35 format=3 uid="uid://cs7el0pq4dasg"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_xfib7"]
 [ext_resource type="Texture2D" uid="uid://j1ek5gkmu61d" path="res://Assets/Background/Artboard_1.png" id="2_l6psc"]
 [ext_resource type="PackedScene" uid="uid://11340dvsbs33" path="res://Particles/flares1.tscn" id="2_tqt0o"]
+[ext_resource type="Texture2D" uid="uid://bcqsudwlu7fo3" path="res://Assets/Effects/Effects/Sunshine/Sunshine_13.png" id="3_5qfyc"]
+[ext_resource type="Texture2D" uid="uid://dev25hbp3updx" path="res://Assets/Effects/Effects/Sunshine/Sunshine_8.png" id="4_p0cxl"]
+[ext_resource type="Texture2D" uid="uid://dhp4q312ecqlj" path="res://Assets/Effects/Effects/Sunshine/Sunshine_7.png" id="5_ki0dj"]
 [ext_resource type="Texture2D" uid="uid://ddydc1pek5b77" path="res://Assets/Platform/Black_White/BlackWhite/Platform/Moving_Platform.png" id="6_7mblg"]
 [ext_resource type="PackedScene" uid="uid://6578ddw8awnx" path="res://Scenes/Platforms/vanishing_platform.tscn" id="7_4vyvc"]
-[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="9_0ji3u"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="10_tmdyt"]
 [ext_resource type="PackedScene" uid="uid://xbp3peidki17" path="res://Scenes/Trap/spiked_ball.tscn" id="11_b011i"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="12_ob1at"]
@@ -42,6 +45,9 @@ adjustment_enabled = true
 adjustment_brightness = 1.08
 adjustment_contrast = 1.1
 adjustment_saturation = 1.05
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4oein"]
+blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5r23d"]
 
@@ -148,11 +154,42 @@ position = Vector2(5271, 317)
 rotation = 4.14305
 amount = 20
 
-[node name="Polygon2D" type="Polygon2D" parent="." index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="WorldEnvironment" index="19"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(297, 266)
+rotation = -0.00521452
+texture = ExtResource("3_5qfyc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="WorldEnvironment" index="20"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(5351, 1010)
+rotation = 0.101484
+scale = Vector2(-1.33795, 1.91983)
+texture = ExtResource("3_5qfyc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="WorldEnvironment" index="21"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2454, 203)
+rotation = -0.00844732
+scale = Vector2(-0.563187, 0.961888)
+texture = ExtResource("4_p0cxl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="22"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_4oein")
+position = Vector2(2338, 1426)
+rotation = -0.230752
+scale = Vector2(-0.955773, 1.20918)
+texture = ExtResource("5_ki0dj")
+
+[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="23"]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-1083, 626, 318, 695, 719, 695, 1161, 700, 1614, 697, 1982, 693, 2446, 677, 2694, 673, 2902, 695, 3159, 674, 3308, 671, 3514, 658, 3706, 679, 3738, 756, 3417, 738, 2308, 772, 2036, 861, 1976, 988, 1995.97, 1565.89, 2060, 1748, 2266, 1815, 5077, 1836, 5730, 1661, 6165, 1419, 6297, 1090, 6198, 616, 5603, 169, 4844, -10, 3088, -113, -179, -33, -321, 112, -297, 435, -282, 588, -56, 735, -1189, 591, -1083, -858, 6883, -771, 6911, 2356, -496, 2348)
 
-[node name="Player" parent="." index="2"]
+[node name="Player" parent="." index="1"]
 position = Vector2(0, 216)
 scale = Vector2(0.409714, 0.409714)
 
@@ -275,7 +312,7 @@ text = "00:20
 [node name="ColorRect" parent="TransitionCanvas" index="0"]
 metadata/_edit_lock_ = true
 
-[node name="Ghost" type="ParallaxBackground" parent="." index="10"]
+[node name="Ghost" type="ParallaxBackground" parent="." index="9"]
 visible = false
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
@@ -338,7 +375,7 @@ texture = ExtResource("18_mf68d")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Default" type="ParallaxBackground" parent="." index="11"]
+[node name="Default" type="ParallaxBackground" parent="." index="10"]
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
 transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
@@ -400,207 +437,203 @@ texture = ExtResource("25_yxwe6")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="SpikeVar3" parent="." index="12" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar3" parent="." index="11" instance=ExtResource("12_ob1at")]
 position = Vector2(-31, 653)
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar4" parent="." index="13" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar4" parent="." index="12" instance=ExtResource("13_3tgih")]
 position = Vector2(97, 675)
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar5" parent="." index="14" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar5" parent="." index="13" instance=ExtResource("15_nc0bq")]
 position = Vector2(256, 662)
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar6" parent="." index="15" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar6" parent="." index="14" instance=ExtResource("12_ob1at")]
 position = Vector2(411, 653)
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar7" parent="." index="16" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar7" parent="." index="15" instance=ExtResource("13_3tgih")]
 position = Vector2(539, 675)
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar8" parent="." index="17" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar8" parent="." index="16" instance=ExtResource("15_nc0bq")]
 position = Vector2(698, 662)
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar9" parent="." index="18" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar9" parent="." index="17" instance=ExtResource("12_ob1at")]
 position = Vector2(855, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar10" parent="." index="19" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar10" parent="." index="18" instance=ExtResource("13_3tgih")]
 position = Vector2(983, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar11" parent="." index="20" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar11" parent="." index="19" instance=ExtResource("15_nc0bq")]
 position = Vector2(1142, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar12" parent="." index="21" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar12" parent="." index="20" instance=ExtResource("12_ob1at")]
 position = Vector2(1291, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar13" parent="." index="22" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar13" parent="." index="21" instance=ExtResource("13_3tgih")]
 position = Vector2(1419, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar14" parent="." index="23" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar14" parent="." index="22" instance=ExtResource("15_nc0bq")]
 position = Vector2(1578, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar15" parent="." index="24" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar15" parent="." index="23" instance=ExtResource("12_ob1at")]
 position = Vector2(1733, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar16" parent="." index="25" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar16" parent="." index="24" instance=ExtResource("13_3tgih")]
 position = Vector2(1861, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar17" parent="." index="26" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar17" parent="." index="25" instance=ExtResource("15_nc0bq")]
 position = Vector2(2020, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar18" parent="." index="27" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar18" parent="." index="26" instance=ExtResource("12_ob1at")]
 position = Vector2(2165, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar19" parent="." index="28" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar19" parent="." index="27" instance=ExtResource("13_3tgih")]
 position = Vector2(2293, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar20" parent="." index="29" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar20" parent="." index="28" instance=ExtResource("15_nc0bq")]
 position = Vector2(2452, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar21" parent="." index="30" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar21" parent="." index="29" instance=ExtResource("12_ob1at")]
 position = Vector2(2602, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar22" parent="." index="31" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar22" parent="." index="30" instance=ExtResource("13_3tgih")]
 position = Vector2(2730, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar23" parent="." index="32" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar23" parent="." index="31" instance=ExtResource("15_nc0bq")]
 position = Vector2(2889, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar24" parent="." index="33" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar24" parent="." index="32" instance=ExtResource("12_ob1at")]
 position = Vector2(3029, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar25" parent="." index="34" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar25" parent="." index="33" instance=ExtResource("13_3tgih")]
 position = Vector2(3157, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar26" parent="." index="35" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar26" parent="." index="34" instance=ExtResource("15_nc0bq")]
 position = Vector2(3316, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar27" parent="." index="36" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar27" parent="." index="35" instance=ExtResource("12_ob1at")]
 position = Vector2(3466, 653)
 rotation = -0.0203016
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar28" parent="." index="37" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar28" parent="." index="36" instance=ExtResource("13_3tgih")]
 position = Vector2(3594, 675)
 rotation = -0.0203016
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar29" parent="." index="38" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar29" parent="." index="37" instance=ExtResource("15_nc0bq")]
 position = Vector2(3753, 662)
 rotation = -0.0203016
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="SpikeVar30" parent="." index="39" instance=ExtResource("12_ob1at")]
+[node name="SpikeVar30" parent="." index="38" instance=ExtResource("12_ob1at")]
 position = Vector2(3447, 757)
 rotation = 3.00566
 scale = Vector2(0.528531, 0.528531)
 isCrossDim = true
 
-[node name="SpikeVar31" parent="." index="40" instance=ExtResource("13_3tgih")]
+[node name="SpikeVar31" parent="." index="39" instance=ExtResource("13_3tgih")]
 position = Vector2(3575, 779)
 rotation = 3.00566
 scale = Vector2(0.448974, 0.448974)
 isCrossDim = true
 
-[node name="SpikeVar32" parent="." index="41" instance=ExtResource("15_nc0bq")]
+[node name="SpikeVar32" parent="." index="40" instance=ExtResource("15_nc0bq")]
 position = Vector2(3734, 766)
 rotation = 3.00566
 scale = Vector2(0.604239, 0.604239)
 isCrossDim = true
 
-[node name="Red Root" parent="." index="42" instance=ExtResource("27_l5s2y")]
+[node name="Red Root" parent="." index="41" instance=ExtResource("27_l5s2y")]
 position = Vector2(-170, 537)
 scale = Vector2(0.4297, 0.4297)
 
-[node name="Red Root2" parent="." index="43" instance=ExtResource("27_l5s2y")]
+[node name="Red Root2" parent="." index="42" instance=ExtResource("27_l5s2y")]
 position = Vector2(1286, 53.9999)
 rotation = -2.14284
 scale = Vector2(0.4297, 0.4297)
 
-[node name="Red Root3" parent="." index="44" instance=ExtResource("27_l5s2y")]
+[node name="Red Root3" parent="." index="43" instance=ExtResource("27_l5s2y")]
 position = Vector2(5726, 634)
 rotation = 0.979731
 scale = Vector2(0.4297, 0.4297)
 
-[node name="Red Root4" parent="." index="45" instance=ExtResource("27_l5s2y")]
+[node name="Red Root4" parent="." index="44" instance=ExtResource("27_l5s2y")]
 position = Vector2(5599, 1405)
 rotation = -1.50898
 scale = Vector2(0.744703, 0.744703)
 
-[node name="Red Root5" parent="." index="46" instance=ExtResource("27_l5s2y")]
+[node name="Red Root5" parent="." index="45" instance=ExtResource("27_l5s2y")]
 position = Vector2(2549, 1627)
 rotation = 1.21448
 scale = Vector2(0.744703, 0.744703)
-
-[node name="Flag" parent="." index="47"]
-position = Vector2(2545, 1156)
-next_level_path = "res://Scenes/Intro.tscn"
 
 [editable path="DefaultDimension/MovingPlatform"]
 [editable path="DefaultDimension/MovingPlatform3"]

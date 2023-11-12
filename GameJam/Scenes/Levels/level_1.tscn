@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c8lv1gfv7kfin"]
+[gd_scene load_steps=34 format=3 uid="uid://c8lv1gfv7kfin"]
 
 [ext_resource type="PackedScene" uid="uid://cgfckltyff5nu" path="res://Scenes/Levels/base_level.tscn" id="1_2sygc"]
 [ext_resource type="PackedScene" uid="uid://cedjis8mig21p" path="res://Scenes/red object.tscn" id="2_xbeht"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwaaqsggdsrq" path="res://Assets/Background_1.2_Blur/B_Blur/B_3_1.png" id="5_ywq87"]
 [ext_resource type="Texture2D" uid="uid://djk5t8qmm3dwi" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_1.png" id="6_e3vy3"]
 [ext_resource type="PackedScene" uid="uid://bh3nym6euqvuw" path="res://Scenes/Trap/spike_var_1.tscn" id="6_k5tu8"]
-[ext_resource type="PackedScene" uid="uid://dmm7wgakxysu3" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
+[ext_resource type="PackedScene" path="res://Scenes/Platforms/vanishing_black_platform.tscn" id="7_b2vxu"]
 [ext_resource type="Texture2D" uid="uid://cak6bmua8cw6" path="res://Assets/Background_1.2_Blur/B_Blur/B_2_2.png" id="7_b71ws"]
 [ext_resource type="PackedScene" uid="uid://crtwbcg7tofbj" path="res://Scenes/Trap/spike_var_2.tscn" id="8_hh6nw"]
 [ext_resource type="Texture2D" uid="uid://b0tlh30xcot4c" path="res://Assets/Background_1.2_Blur/B_Blur/B_1_3.png" id="8_ybkpd"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://canjrhj8as6ph" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_1.png" id="13_uq71u"]
 [ext_resource type="Texture2D" uid="uid://cjlbptvufxi0q" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_2_2.png" id="14_5f4iw"]
 [ext_resource type="Texture2D" uid="uid://jyg8lfgh4yvb" path="res://Assets/Background_1.2_Blur/Black_White/B_Black_White/B_1_3.png" id="15_u81xt"]
+[ext_resource type="Texture2D" uid="uid://cltxjpsy5gow2" path="res://Assets/Effects/Effects/Sunshine/Sunshine_2.png" id="17_jj5fq"]
+[ext_resource type="Texture2D" uid="uid://drefjpuv57e28" path="res://Assets/Effects/Effects/Sunshine/Sunshine_3.png" id="18_fc6ht"]
 [ext_resource type="Texture2D" uid="uid://c3735dqmlmp5r" path="res://Assets/Platform/Cross_Platform.png" id="27_om75n"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p7g1l"]
@@ -45,6 +47,9 @@ adjustment_enabled = true
 adjustment_contrast = 1.1
 adjustment_saturation = 1.2
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_57e6j"]
+blend_mode = 1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_agxpq"]
 
 [node name="Level1" node_paths=PackedStringArray("ghost_background", "default_background") instance=ExtResource("1_2sygc")]
@@ -52,12 +57,7 @@ expectedTime = 13.0
 ghost_background = NodePath("Ghost")
 default_background = NodePath("Default")
 
-[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
-color = Color(0, 0, 0, 1)
-antialiased = true
-polygon = PackedVector2Array(151, -17, 1508, -445, 2968, -504, 3519, 143, 3361, 1389, 2220, 1044, 2242, 2265, 4397, 1907, 4243, -188, 4354, -1195, -2273, -1016, -2258, 2234, 2265, 2207, 2256, 1037, 1273, 1289, 1041, 1431, 671, 1455, 461, 1341, 171, 1272, -78, 1087, -168, 777, -109, 290, -53, 138)
-
-[node name="Ghost" type="ParallaxBackground" parent="." index="1"]
+[node name="Ghost" type="ParallaxBackground" parent="." index="0"]
 visible = false
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
@@ -120,7 +120,7 @@ texture = ExtResource("8_ybkpd")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Default" type="ParallaxBackground" parent="." index="2"]
+[node name="Default" type="ParallaxBackground" parent="." index="1"]
 offset = Vector2(0, -150)
 scale = Vector2(1.1, 1.3)
 transform = Transform2D(1.1, 0, 0, 1.3, 0, -150)
@@ -182,7 +182,7 @@ texture = ExtResource("15_u81xt")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 environment = SubResource("Environment_8rmmg")
 
 [node name="GPUParticles2D2" parent="WorldEnvironment" index="0" instance=ExtResource("9_fv0t6")]
@@ -206,22 +206,43 @@ rotation = 0.116079
 
 [node name="PointLight2D" type="PointLight2D" parent="WorldEnvironment" index="5"]
 
-[node name="Red Root" parent="." index="4" instance=ExtResource("2_xbeht")]
+[node name="Sprite2D4" type="Sprite2D" parent="WorldEnvironment" index="6"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_57e6j")
+position = Vector2(599, 486)
+rotation = -0.230752
+scale = Vector2(-0.819609, 1.73466)
+texture = ExtResource("17_jj5fq")
+
+[node name="Sprite2D5" type="Sprite2D" parent="WorldEnvironment" index="7"]
+modulate = Color(0.909804, 1, 1, 0.298039)
+material = SubResource("CanvasItemMaterial_57e6j")
+position = Vector2(1535, 499)
+rotation = 4.64469e-05
+scale = Vector2(1.01317, 2.00094)
+texture = ExtResource("18_fc6ht")
+
+[node name="Polygon2D" type="Polygon2D" parent="WorldEnvironment" index="8"]
+color = Color(0, 0, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(151, -17, 1508, -445, 2968, -504, 3519, 143, 3361, 1389, 2220, 1044, 2242, 2265, 4397, 1907, 4243, -188, 4354, -1195, -2273, -1016, -2258, 2234, 2265, 2207, 2256, 1037, 1273, 1289, 1041, 1431, 671, 1455, 461, 1341, 171, 1272, -78, 1087, -168, 777, -109, 290, -53, 138)
+
+[node name="Red Root" parent="." index="3" instance=ExtResource("2_xbeht")]
 position = Vector2(1769, 807)
 scale = Vector2(0.315484, 0.315484)
 
-[node name="Red Root3" parent="." index="5" instance=ExtResource("2_xbeht")]
+[node name="Red Root3" parent="." index="4" instance=ExtResource("2_xbeht")]
 position = Vector2(1224, 1177)
 scale = Vector2(0.315484, 0.315484)
 
-[node name="Red Root2" parent="." index="6" instance=ExtResource("2_xbeht")]
+[node name="Red Root2" parent="." index="5" instance=ExtResource("2_xbeht")]
 modulate = Color(100, 1, 1, 1)
 material = SubResource("CanvasItemMaterial_agxpq")
 position = Vector2(2290, 194)
 rotation = 3.14159
 scale = Vector2(1.02932, 1.02932)
 
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="6"]
 position = Vector2(960, 884)
 scale = Vector2(0.280378, 0.287408)
 
@@ -235,7 +256,7 @@ rotation = -0.0227376
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
 collision_mask = 2
-jump_force = 600.0
+jump_force = 400.0
 
 [node name="MovingPlatform3" parent="GhostDimension" index="1" instance=ExtResource("3_0g5en")]
 position = Vector2(1935, 35)
@@ -424,14 +445,10 @@ text = "00:13
 
 "
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="14"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="13"]
 visible = false
 position = Vector2(182, -302)
 rotation = -0.496984
 shadow_enabled = true
-
-[node name="Flag" parent="." index="16"]
-position = Vector2(1924, -39)
-next_level_path = "res://Scenes/Levels/level 2.tscn"
 
 [editable path="CrossDimension/MovingPlatform"]
